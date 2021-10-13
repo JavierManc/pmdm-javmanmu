@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_vertical">16dp</dimen>
+    <dimen name="space_horizontal">8dp</dimen>
+    <dimen name="double_space_horizontal">16dp</dimen>
+
+    <dimen name="avatar_width">147dp</dimen>
+    <dimen name="avatar_height">114dp</dimen>
+
+    <dimen name="footer_image_wid_hei">40dp</dimen>
+
+    <dimen name="margin_start_header">20dp</dimen>
+    <dimen name="margin_top_header">7dp</dimen>
+    <dimen name="margin_bottom_header">5dp</dimen>
+
+    <dimen name="margin_start_title">40dp</dimen>
+    <dimen name="margin_top_title">10dp</dimen>
+
+    <dimen name="margin_start_it">23dp</dimen>
+    <dimen name="margin_top_it">40dp</dimen>
+</resources>
