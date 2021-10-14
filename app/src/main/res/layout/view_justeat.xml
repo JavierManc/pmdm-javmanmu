@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/tapa1"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tapa1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/logores1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-120dp"
+            android:layout_below="@id/tapa1"
+            android:src="@drawable/casameranilogo"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_below="@id/logores1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/titres1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/rest_1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/food1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/food"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/deliver1"
+                android:layout_below="@id/food1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deliver"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/dist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deliver1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/distance"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
