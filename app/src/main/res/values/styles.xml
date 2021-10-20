@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo que agrupa dimensiones y márgenes del logo del restaurante -->
+    <style name="logo_style">
+        <item name="android:layout_width">@dimen/logo_width_height</item>
+        <item name="android:layout_height">@dimen/logo_width_height</item>
+        <item name="android:layout_marginTop">@dimen/logo_margin_top</item>
+    </style>
+
+    <!-- Estilo del relative layout con los datos del restaurante -->
+    <style name="rel_lay_restaurant">
+        <item name="android:layout_marginStart">@dimen/rest_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/rest_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/rest_margin_end</item>
+        <item name="android:padding">@dimen/rest_padding</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- Estilo del título del restaurante -->
+    <style name="title_style">
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!-- Estilo de la descripción del restaurante -->
+    <style name="desc_style">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/desc_text_size</item>
+    </style>
+
+    <!-- Estilo que agrupa los márgenes de la primera fila de objetos que se encuentran debajo de la descripción -->
+    <style name="margins_first_row">
+        <item name="android:layout_marginStart">@dimen/row_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/row_margin_top</item>
+    </style>
+
+    <!-- Estilo que agrupa los márgenes de la primera fila de objetos que se encuentran debajo de la primera fila de objetos -->
+    <style name="margins_second_row">
+        <item name="android:layout_marginStart">@dimen/row2_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/row2_margin_top</item>
+    </style>
+
+    <!-- Estilo que agrupa las dimensiones de las estrellas de valoración -->
+    <style name="img_stars">
+        <item name="android:layout_width">@dimen/star_width_height</item>
+        <item name="android:layout_height">@dimen/star_width_height</item>
+    </style>
+</resources>

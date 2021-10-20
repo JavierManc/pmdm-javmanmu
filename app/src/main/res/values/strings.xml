@@ -8,5 +8,6 @@
     <string name="food">Sandwitches. Otros</string>
     <string name="deliver">Entrega gratuita. Pedido mínimo 8€</string>
     <string name="distance">0,4 km</string>
-    <string name="time">35-60 mins</string>
+    <string name="time">35–60 mins</string>
+    <string name="new_res">Nuevo</string>
 </resources>

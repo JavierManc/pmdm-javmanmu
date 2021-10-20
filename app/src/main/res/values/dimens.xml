@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimens logo restaurante -->
+    <dimen name="logo_width_height">60dp</dimen>
+    <dimen name="logo_margin_top">-120dp</dimen>
+
+    <!-- Dimens relative layout del restaurante -->
+    <dimen name="rest_margin_start">10dp</dimen>
+    <dimen name="rest_margin_top">-5dp</dimen>
+    <dimen name="rest_margin_end">10dp</dimen>
+    <dimen name="rest_padding">5dp</dimen>
+
+    <!-- Dimen de cada título del restaurante -->
+    <dimen name="title_size">15sp</dimen>
+
+    <!-- Dimen descripcion restaurante -->
+    <dimen name="desc_text_size">13sp</dimen>
+
+    <!-- Dimens márgenes de la primera fila de objetos -->
+    <dimen name="row_margin_start">5dp</dimen>
+    <dimen name="row_margin_top">10dp</dimen>
+
+    <!-- Dimens márgenes de la segunda fila de objetos -->
+    <dimen name="row2_margin_start">5dp</dimen>
+    <dimen name="row2_margin_top">6dp</dimen>
+
+    <!-- Dimen de las dimensiones de las estrellas -->
+    <dimen name="star_width_height">20dp</dimen>
+</resources>

@@ -1,81 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
 
-
-    <RelativeLayout
+    <!-- Imagen del restaurante (prefiero el resultado poniendo imagen en vez de ponerlo como background)-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_tapa1"
         android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/tapa1"
+        tools:ignore="ContentDescription" />
+
+    <!-- Imágen del logo del restaurante -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_res1"
+        style="@style/logo_style"
+        android:layout_below="@id/img_tapa1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/casameranilogo"
+        tools:ignore="ContentDescription" />
+
+    <!-- Layout con los datos del restaurante -->
+    <RelativeLayout
+        style="@style/rel_lay_restaurant"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_below="@id/logo_res1">
 
-        <ImageView
-            android:id="@+id/tapa1"
+        <!-- Título o nombre -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/res_title1"
+            style="@style/title_style"
             android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:src="@drawable/tapa1"
-            tools:ignore="ContentDescription" />
+            android:layout_height="wrap_content"
+            android:text="@string/rest_1" />
 
-        <ImageView
-            android:id="@+id/logores1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="-120dp"
-            android:layout_below="@id/tapa1"
-            android:src="@drawable/casameranilogo"
-            tools:ignore="ContentDescription" />
+        <!-- Descripción -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/res_food1"
+            style="@style/desc_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_title1"
+            android:text="@string/food" />
 
-        <RelativeLayout
-            android:padding="5dp"
-            android:layout_below="@id/logores1"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="-5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@color/white">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/res_deliver1"
+            style="@style/desc_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_food1"
+            android:text="@string/deliver" />
 
-            <TextView
-                android:id="@+id/titres1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="@string/rest_1"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="15sp"/>
 
-            <TextView
-                android:id="@+id/food1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/food"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"/>
+        <!-- Imágen con texto sobre localización -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_loc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_deliver1"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_location_on_black_24dp" />
 
-            <TextView
-                android:id="@+id/deliver1"
-                android:layout_below="@id/food1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/deliver"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/res_dist1"
+            style="@style/margins_first_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_deliver1"
+            android:layout_toEndOf="@id/ic_loc1"
+            android:text="@string/distance" />
 
-            <TextView
-                android:id="@+id/dist1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/deliver1"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/distance"/>
+        <!-- Imágen y texto sobre el tiempo de entrega -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/res_clock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_loc1"
+            android:src="@drawable/ic_clock_black_24dp" />
 
-        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/margins_second_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_dist1"
+            android:layout_toEndOf="@id/res_clock1"
+            android:text="@string/time" />
+
+        <!-- Información sobre si el restaurante es nuevo -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/new_res"
+            style="@style/margins_first_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_deliver1"
+            android:layout_alignParentEnd="true"
+            android:text="@string/new_res"
+            android:textColor="@color/teal_700" />
+
+        <!-- Estrellas de valoración -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            style="@style/margins_second_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_res"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/img_stars"
+                android:src="@drawable/ic_star_yellow_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/img_stars"
+                android:src="@drawable/ic_star_yellow_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/img_stars"
+                android:src="@drawable/ic_star_yellow_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/img_stars"
+                android:src="@drawable/ic_star_yellow_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/img_stars"
+                android:src="@drawable/ic_star_border_yellow_24dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     </RelativeLayout>
 
