@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">PMPD-PlayGround</string>
     <string name="name_image">Nombre de la imagen</string>
+    <string name="programs">Programas</string>
+    <string name="films">Películas</string>
+    <string name="list">Mi lista</string>
+    <string name="populars">Populares en Netflix</string>
+    <string name="trends">Tendencias</string>
+    <string name="view_again">Verlo nuevamente</string>
 </resources>
