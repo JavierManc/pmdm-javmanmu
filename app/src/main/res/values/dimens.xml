@@ -26,4 +26,8 @@
 
     <!-- Dimen de las dimensiones de las estrellas -->
     <dimen name="star_width_height">20dp</dimen>
+
+    <dimen name="clock_margin_top">5dp</dimen>
+
+    <dimen name="star_margin_top">5dp</dimen>
 </resources>
