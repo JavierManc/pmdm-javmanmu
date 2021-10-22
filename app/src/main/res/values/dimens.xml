@@ -36,5 +36,7 @@
     <!-- Dimen del tamaño de la altura de la imágen de fondo -->
     <dimen name="img_height">300dp</dimen>
 
-    <!-- -->
+    <!-- Dimen del texto de patrocinado -->
+    <dimen name="promo_margin_end">10dp</dimen>
+    <dimen name="promo_text_size">12dp</dimen>
 </resources>

@@ -48,4 +48,10 @@
         <item name="android:layout_width">@dimen/star_width_height</item>
         <item name="android:layout_height">@dimen/star_width_height</item>
     </style>
+
+    <!-- Estilo del rectángulo de si el restaurante está patrocinado -->
+    <style name="promo_style">
+        <item name="android:textSize">@dimen/promo_text_size</item>
+        <item name="android:layout_marginEnd">@dimen/promo_margin_end</item>
+    </style>
 </resources>
