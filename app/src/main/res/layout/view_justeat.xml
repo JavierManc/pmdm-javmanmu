@@ -24,7 +24,7 @@
 
     <!-- Layout con los datos del restaurante -->
     <RelativeLayout
-        style="@style/rel_lay_restaurant"
+        style="@style/lay_restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_res1">
