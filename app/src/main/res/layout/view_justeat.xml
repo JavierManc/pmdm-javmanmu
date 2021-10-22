@@ -35,7 +35,8 @@
             style="@style/title_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rest_1" />
+            android:text="@string/rest_1"
+            android:padding="@dimen/text_padding"/>
 
         <!-- Descripción -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -44,7 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/res_title1"
-            android:text="@string/food" />
+            android:text="@string/food"
+            android:padding="@dimen/text_padding"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_deliver1"
@@ -52,7 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/res_food1"
-            android:text="@string/deliver" />
+            android:text="@string/deliver"
+            android:padding="@dimen/text_padding"/>
 
 
         <!-- Imágen con texto sobre localización -->

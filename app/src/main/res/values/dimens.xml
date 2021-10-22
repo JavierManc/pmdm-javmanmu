@@ -39,4 +39,7 @@
     <!-- Dimen del texto de patrocinado -->
     <dimen name="promo_margin_end">10dp</dimen>
     <dimen name="promo_text_size">12dp</dimen>
+
+    <!-- Dimen del relleno entre textos -->
+    <dimen name="text_padding">4dp</dimen>
 </resources>

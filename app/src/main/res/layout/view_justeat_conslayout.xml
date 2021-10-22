@@ -30,7 +30,8 @@
         android:text="@string/promo"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/lay_desc_rest1"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/text_padding"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lay_desc_rest1"
@@ -52,7 +53,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/text_padding"/>
 
         <TextView
             android:id="@+id/res_food1"
@@ -62,7 +64,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_res" />
+            app:layout_constraintTop_toBottomOf="@id/title_res"
+            android:padding="@dimen/text_padding"/>
 
         <TextView
             android:id="@+id/res_deliver1"
@@ -72,7 +75,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/res_food1" />
+            app:layout_constraintTop_toBottomOf="@id/res_food1"
+            android:padding="@dimen/text_padding"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_loc1"
