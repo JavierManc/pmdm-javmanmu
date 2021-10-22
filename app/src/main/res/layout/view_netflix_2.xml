@@ -8,7 +8,7 @@
 
     <!-- Cabecera de la app con logo-->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/headerview"
+        android:id="@+id/header_view"
         style="@style/HeaderMargins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,11 +45,11 @@
 
     <!-- Contenido importante de la vista -->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/bodyview"
+        android:id="@+id/body_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/footerview"
-        android:layout_below="@id/headerview"
+        android:layout_above="@id/footer_view"
+        android:layout_below="@id/header_view"
         android:background="@color/gray"
         android:orientation="vertical">
 
@@ -62,7 +62,6 @@
 
         <!-- Relative layout con el listado de películas -->
         <RelativeLayout
-            android:id="@+id/rellay1"
             style="@style/RelativeLayoutFilms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -152,7 +151,7 @@
 
     <!-- Footer con los iconos de navegación -->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/footerview"
+        android:id="@+id/footer_view"
         style="@style/FooterMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

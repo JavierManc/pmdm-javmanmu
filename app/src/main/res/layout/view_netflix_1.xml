@@ -7,7 +7,7 @@
 
     <!-- Primer layout (header) -->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/headerview"
+        android:id="@+id/header_view"
         style="@style/HeaderMargins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,11 +32,11 @@
 
     <!-- Contenido importante de la vista -->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/bodyview"
+        android:id="@+id/body_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/footerview"
-        android:layout_below="@id/headerview"
+        android:layout_above="@id/footer_view"
+        android:layout_below="@id/header_view"
         android:background="@color/gray"
         android:orientation="vertical">
 
@@ -158,7 +158,7 @@
 
     <!-- Último layout (footer) con los iconos de navegación -->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/footerview"
+        android:id="@+id/footer_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
