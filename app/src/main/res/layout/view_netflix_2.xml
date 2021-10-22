@@ -153,11 +153,11 @@
     <!-- Footer con los iconos de navegación -->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/footerview"
+        style="@style/FooterMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        style="@style/FooterMargin">
+        android:layout_centerHorizontal="true">
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
@@ -165,22 +165,22 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_search_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_smart_display_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_file_download_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_menu_black_24dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 

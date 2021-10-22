@@ -18,15 +18,14 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="@dimen/margin_start_header_view1"
             android:src="@drawable/ic_help_black_24dp" />
 
         <!-- Texto de ejemplo -->
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:maxLines="1"
+            android:layout_marginStart="@dimen/margin_start_header_view1"
             android:textColor="@color/white"
             tools:text="@tools:sample/lorem/random" />
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -173,22 +172,22 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_search_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_smart_display_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_file_download_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             style="@style/FooterImageView"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="@dimen/margin_footer_img"
             android:src="@drawable/ic_menu_black_24dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 

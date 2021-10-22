@@ -28,4 +28,7 @@
 
     <dimen name="footer_margin_top_bottom">5dp</dimen>
 
+    <dimen name="margin_start_header_view1">5dp</dimen>
+
+    <dimen name="margin_footer_img">30dp</dimen>
 </resources>
