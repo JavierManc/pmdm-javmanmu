@@ -10,10 +10,10 @@
 
     <!-- Estilo del relative layout con los datos del restaurante -->
     <style name="rel_lay_restaurant">
-        <item name="android:layout_marginStart">@dimen/rest_margin_start</item>
-        <item name="android:layout_marginTop">@dimen/rest_margin_top</item>
-        <item name="android:layout_marginEnd">@dimen/rest_margin_end</item>
-        <item name="android:padding">@dimen/rest_padding</item>
+        <item name="android:layout_marginStart">@dimen/lay_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/lay_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/lay_margin_end</item>
+        <item name="android:padding">@dimen/lay_padding</item>
         <item name="android:background">@color/white</item>
     </style>
 

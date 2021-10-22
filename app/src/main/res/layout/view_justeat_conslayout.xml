@@ -7,7 +7,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/bg_image1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/img_height"
         android:src="@drawable/tapa1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,8 +26,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        style="@style/rel_lay_restaurant"
         android:background="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo_res1">
@@ -38,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="@string/rest_1"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="@dimen/title_size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -5,10 +5,10 @@
     <dimen name="logo_margin_top">-120dp</dimen>
 
     <!-- Dimens relative layout del restaurante -->
-    <dimen name="rest_margin_start">10dp</dimen>
-    <dimen name="rest_margin_top">-5dp</dimen>
-    <dimen name="rest_margin_end">10dp</dimen>
-    <dimen name="rest_padding">5dp</dimen>
+    <dimen name="lay_margin_start">10dp</dimen>
+    <dimen name="lay_margin_top">-5dp</dimen>
+    <dimen name="lay_margin_end">10dp</dimen>
+    <dimen name="lay_padding">5dp</dimen>
 
     <!-- Dimen de cada título del restaurante -->
     <dimen name="title_size">15sp</dimen>
@@ -27,7 +27,14 @@
     <!-- Dimen de las dimensiones de las estrellas -->
     <dimen name="star_width_height">20dp</dimen>
 
+    <!-- Dimen del márgen superior del icono del reloj -->
     <dimen name="clock_margin_top">5dp</dimen>
 
+    <!-- Dimen del márgen superior de las estrellas-->
     <dimen name="star_margin_top">5dp</dimen>
+
+    <!-- Dimen del tamaño de la altura de la imágen de fondo -->
+    <dimen name="img_height">300dp</dimen>
+
+    <!-- -->
 </resources>
