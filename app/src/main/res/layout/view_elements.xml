@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TextView: muestra un texto en pantalla. Puede tener una o más líneas -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/white" />
+
+        <!-- EditTextView permite recoger texto del usuario -->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Información sobre el texto" />
+
+        <!-- Es como un EditTextView pero con una etiqueta asociada -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_2x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/app_name" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- AppCompatImageView: Elemento para mostrar imágenes -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image01"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            tools:src="@tools:sample/avatars" />
+
+        <!-- Puede mostrar, combinar y filtrar imágenes -->
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lion"
+            app:altSrc="@drawable/lion"
+            app:crossfade="0.5" />
+
+        <!-- Button: muestra un botón de acción -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lion" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:altSrc="@drawable/lion"
+            app:crossfade="0.5"
+            tools:src="@tools:sample/avatars" />
+
+        <!-- RadioButtons: Botones de selección -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_pirates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="True" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_ninjas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="False" />
+
+        </RadioGroup>
+
+        <!-- Checkbox: Casillas de selección múltiple -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cine" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Música" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deportes" />
+        </LinearLayout>
+
+        <!-- Botones de activación -->
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOff="False"
+            android:textOn="True" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar notificaciones" />
+
+        <!-- RatingBar: componente para seleccionar una serie de objetos -->
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="2.5" />
+
+        <!-- SeekBar -->
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="25" />
+
+        <!-- ProgressBar: circular -->
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- ProgressBar: horizontal -->
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="45" />
+
+        <!-- ContentLoadingProgressBar -->
+        <!-- ContentLoadingProgressBar implementa una ProgressBar
+             que espera un tiempo mínimo para ser descartado antes
+             de mostrarse. Una vez visible, la barra de progreso
+             estará visible durante una cantidad mínima de tiempo
+             para evitar "destellos" en la interfaz de usuario
+             cuando un evento puede tardar un tiempo muy variable
+             en completarse (de ninguna a una cantidad perceptible
+             por el usuario).-->
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:indeterminate="true"
+            android:visibility="visible" />
+
+        <!-- Elemento para buscar registros relacionados con lo que se escribe -->
+        <!-- suele ir en las toolbar -->
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:queryHint="Introduce un hotel" />
+
+        <!-- Listas desplegables -->
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/planets_array" />
+    </LinearLayout>
+
+
+</ScrollView>
