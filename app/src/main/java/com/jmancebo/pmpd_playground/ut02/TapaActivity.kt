@@ -74,8 +74,8 @@ class TapaActivity : AppCompatActivity() {
     }
 
     private fun setTextNewRestaurant(){
-        val newRes : AppCompatTextView = findViewById(R.id.res_rating1)
-        newRes.text = getText(R.string.rating)
+        val newRes : AppCompatTextView = findViewById(R.id.new_res)
+        newRes.text = getText(R.string.new_res)
     }
 
     private fun setRatingStars(){
