@@ -2,32 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/bg_image1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/img_height"
-        android:src="@drawable/tapa1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/tapa1" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/logo_res1"
         style="@style/logo_style"
-        android:src="@drawable/casameranilogo"
+        tools:src="@drawable/casameranilogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bg_image1" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/promo_res1"
         style="@style/promo_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/gray_dif"
-        android:text="@string/promo"
+        tools:text="@string/promo"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/lay_desc_rest1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +44,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo_res1">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rest_1"
+            tools:text="@string/rest_1"
             android:textColor="@color/black"
             android:textSize="@dimen/title_size"
             android:textStyle="bold"
@@ -56,22 +58,22 @@
             app:layout_constraintTop_toTopOf="parent"
             android:padding="@dimen/text_padding"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_food1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/food"
+            tools:text="@string/food"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_res"
             android:padding="@dimen/text_padding"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_deliver1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/deliver"
+            tools:text="@string/deliver"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,16 +85,16 @@
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_location_on_black_24dp"
+            tools:src="@drawable/ic_location_on_black_24dp"
             app:layout_constraintEnd_toStartOf="@id/res_dist1"
             app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_dist1"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/distance"
+            tools:text="@string/distance"
             app:layout_constraintStart_toEndOf="@id/ic_loc1"
             app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
 
@@ -100,16 +102,16 @@
             android:id="@+id/ic_clock1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_clock_black_24dp"
+            tools:src="@drawable/ic_clock_black_24dp"
             app:layout_constraintEnd_toStartOf="@id/res_time1"
             app:layout_constraintTop_toBottomOf="@id/ic_loc1" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_time1"
             style="@style/margins_second_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time"
+            tools:text="@string/time"
             app:layout_constraintStart_toEndOf="@id/ic_clock1"
             app:layout_constraintTop_toBottomOf="@id/res_dist1" />
 
@@ -118,18 +120,18 @@
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/new_res"
+            tools:text="@string/new_res"
             android:textColor="@color/teal_700"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
 
         <!-- Estrellas -->
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_rating1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/star_margin_top"
-            android:text="@string/rating"
+            tools:text="@string/rating"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
@@ -138,7 +140,7 @@
             android:id="@+id/res1_star1"
             style="@style/img_stars"
             android:layout_marginTop="@dimen/star_margin_top"
-            android:src="@drawable/ic_star_border_yellow_24dp"
+            tools:src="@drawable/ic_star_border_yellow_24dp"
             app:layout_constraintEnd_toStartOf="@id/res_rating1"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
 
@@ -146,7 +148,7 @@
             android:id="@+id/res1_star2"
             style="@style/img_stars"
             android:layout_marginTop="@dimen/star_margin_top"
-            android:src="@drawable/ic_star_yellow_24dp"
+            tools:src="@drawable/ic_star_yellow_24dp"
             app:layout_constraintEnd_toStartOf="@id/res1_star1"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
 
@@ -154,7 +156,7 @@
             android:id="@+id/res1_star3"
             style="@style/img_stars"
             android:layout_marginTop="@dimen/star_margin_top"
-            android:src="@drawable/ic_star_yellow_24dp"
+            tools:src="@drawable/ic_star_yellow_24dp"
             app:layout_constraintEnd_toStartOf="@id/res1_star2"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
 
@@ -162,7 +164,7 @@
             android:id="@+id/res1_star4"
             style="@style/img_stars"
             android:layout_marginTop="@dimen/star_margin_top"
-            android:src="@drawable/ic_star_yellow_24dp"
+            tools:src="@drawable/ic_star_yellow_24dp"
             app:layout_constraintEnd_toStartOf="@id/res1_star3"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
 
@@ -170,7 +172,7 @@
             android:id="@+id/res1_star5"
             style="@style/img_stars"
             android:layout_marginTop="@dimen/star_margin_top"
-            android:src="@drawable/ic_star_yellow_24dp"
+            tools:src="@drawable/ic_star_yellow_24dp"
             app:layout_constraintEnd_toStartOf="@id/res1_star4"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
 
