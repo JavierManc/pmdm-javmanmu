@@ -11,7 +11,7 @@
     <string name="time">35–60 mins</string>
     <string name="new_res">Nuevo</string>
 
-    <string name="rating">4</string>
+    <string name="rating">Rating:</string>
 
     <string name="promo">Patrocinado</string>
 </resources>

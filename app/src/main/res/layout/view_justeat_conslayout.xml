@@ -136,45 +136,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/new_res" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res1_star1"
-            style="@style/img_stars"
-            android:layout_marginTop="@dimen/star_margin_top"
-            tools:src="@drawable/ic_star_border_yellow_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res_rating1"
-            app:layout_constraintTop_toBottomOf="@id/new_res" />
+        <!-- RatingBar  -->
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_bar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/res_time1"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res1_star2"
-            style="@style/img_stars"
-            android:layout_marginTop="@dimen/star_margin_top"
-            tools:src="@drawable/ic_star_yellow_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res1_star1"
-            app:layout_constraintTop_toBottomOf="@id/new_res" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res1_star3"
-            style="@style/img_stars"
-            android:layout_marginTop="@dimen/star_margin_top"
-            tools:src="@drawable/ic_star_yellow_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res1_star2"
-            app:layout_constraintTop_toBottomOf="@id/new_res" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res1_star4"
-            style="@style/img_stars"
-            android:layout_marginTop="@dimen/star_margin_top"
-            tools:src="@drawable/ic_star_yellow_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res1_star3"
-            app:layout_constraintTop_toBottomOf="@id/new_res" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res1_star5"
-            style="@style/img_stars"
-            android:layout_marginTop="@dimen/star_margin_top"
-            tools:src="@drawable/ic_star_yellow_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res1_star4"
-            app:layout_constraintTop_toBottomOf="@id/new_res" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
