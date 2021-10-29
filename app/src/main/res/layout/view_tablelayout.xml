@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:collapseColumns="0,1">
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+
+            <TextView android:text="Columna3" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+
+            <TextView android:text="Columna3" />
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1">
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:text="Columna1" />
+
+            <TextView
+                android:layout_column="0"
+                android:text="Columna2" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Columna1" />
+
+            <TextView android:text="Columna2" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow android:background="@drawable/border_table">
+
+                <TextView android:text="Columna1" />
+
+                <TextView android:text="Columna2" />
+
+                <TextView android:text="Columna3" />
+            </TableRow>
+
+            <TableRow android:background="@drawable/border_table">
+
+                <TextView
+                    android:layout_span="2"
+                    android:text="Columna1" />
+
+                <TextView android:text="Columna2" />
+            </TableRow>
+
+        </TableLayout>
+
+    </TableLayout>
+
+</LinearLayout>

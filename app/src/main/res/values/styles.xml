@@ -54,4 +54,63 @@
         <item name="android:textSize">@dimen/promo_text_size</item>
         <item name="android:layout_marginEnd">@dimen/promo_margin_end</item>
     </style>
+    <!-- EStilo para el avatar del listado de usuarios -->
+    <style name="AvatarView">
+        <item name="android:layout_width">@dimen/avatar_width</item>
+        <item name="android:layout_height">@dimen/avatar_height</item>
+        <item name="android:layout_marginLeft">@dimen/space_horizontal</item>
+    </style>
+
+    <!-- Estilo para las imágenes del footer -->
+    <style name="FooterImageView">
+        <item name="android:layout_width">@dimen/footer_image_wid_hei</item>
+        <item name="android:layout_height">@dimen/footer_image_wid_hei</item>
+    </style>
+
+    <!-- Estilo para los márgenes del header -->
+    <style name="HeaderMargins">
+        <item name="android:layout_marginStart">@dimen/margin_start_header</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_header</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_header</item>
+    </style>
+
+    <!-- Estilo para los títulos de las imágenes -->
+    <style name="ImageTitles">
+        <item name="android:layout_marginStart">@dimen/margin_start_it</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_it</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo para las descripciones -->
+    <style name="ImageDescriptions">
+        <item name="android:textSize">@dimen/desc_text_size</item>
+        <item name="android:textColor">@color/gray_white</item>
+        <item name="android:layout_marginStart">@dimen/margin_start_it</item>
+    </style>
+
+    <!-- Estilo para los títlos del header -->
+    <style name="HeaderTitles">
+        <item name="android:layout_marginStart">@dimen/margin_start_title</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_title</item>
+    </style>
+
+    <!-- Estilo para los relative layout de las películas -->
+    <style name="RelativeLayoutFilms">
+        <item name="android:layout_marginStart">@dimen/margin_start_rel_lay_films</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_rel_lay_films</item>
+    </style>
+
+    <!-- Estilo para el logo de Netflix -->
+    <style name="NetflixLogo">
+        <item name="android:layout_width">@dimen/netflix_logo_widht</item>
+        <item name="android:layout_height">@dimen/netflix_logo_height</item>
+    </style>
+
+    <!-- Estilo para los márgenes del footer -->
+    <style name="FooterMargin">
+        <item name="android:layout_marginTop">@dimen/footer_margin_top_bottom</item>
+        <item name="android:layout_marginBottom">@dimen/footer_margin_top_bottom</item>
+    </style>
 </resources>

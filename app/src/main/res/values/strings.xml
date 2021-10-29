@@ -13,4 +13,10 @@
     <string name="rating">Rating:</string>
     <string name="promo">Patrocinado</string>
     <string name="info_rating_food">Puntuación %1$s/%2$d</string>
+    <string name="programs">Programas</string>
+    <string name="films">Películas</string>
+    <string name="list">Mi lista</string>
+    <string name="populars">Populares en Netflix</string>
+    <string name="trends">Tendencias</string>
+    <string name="view_again">Verlo nuevamente</string>
 </resources>

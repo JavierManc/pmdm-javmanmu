@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Primer layout (header) -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_view"
+        style="@style/HeaderMargins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <!-- Icono de interrogación -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_header_view1"
+            android:src="@drawable/ic_help_black_24dp" />
+
+        <!-- Texto de ejemplo -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_header_view1"
+            android:textColor="@color/white"
+            tools:text="@tools:sample/lorem/random"
+            android:lines="1"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Contenido importante de la vista -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/body_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer_view"
+        android:layout_below="@id/header_view"
+        android:background="@color/gray"
+        android:orientation="vertical">
+
+        <!-- Relative layout con el contenido de cada película -->
+        <RelativeLayout
+            style="@style/RelativeLayoutFilms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Imagen de ejemplo -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image01"
+                style="@style/AvatarView"
+                tools:src="@tools:sample/avatars" />
+
+            <!-- Título de ejemplo -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title1"
+                style="@style/ImageTitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/image01"
+                tools:ignore="RelativeOverlap"
+                tools:text="@tools:sample/lorem" />
+
+            <!-- Icono de descarga -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_done_black_24dp" />
+
+            <!-- Descripción de ejemplo -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ImageDescriptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title1"
+                android:layout_toEndOf="@id/image01"
+                tools:ignore="SmallSp"
+                tools:text="@tools:sample/lorem" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/RelativeLayoutFilms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image02"
+                style="@style/AvatarView"
+                tools:src="@tools:sample/avatars" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title2"
+                style="@style/ImageTitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/image02"
+                tools:ignore="RelativeOverlap"
+                tools:text="@tools:sample/lorem" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_get_app_black_24dp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ImageDescriptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title2"
+                android:layout_toEndOf="@id/image02"
+                tools:ignore="SmallSp"
+                tools:text="@tools:sample/lorem" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/RelativeLayoutFilms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image03"
+                style="@style/AvatarView"
+                tools:src="@tools:sample/avatars" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title3"
+                style="@style/ImageTitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/image03"
+                tools:ignore="RelativeOverlap"
+                tools:text="@tools:sample/lorem" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_done_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ImageDescriptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title3"
+                android:layout_toEndOf="@id/image03"
+                tools:ignore="SmallSp"
+                tools:text="@tools:sample/lorem" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Último layout (footer) con los iconos de navegación -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/footer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/FooterMargin">
+
+        <!-- Icono de navegación -->
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/FooterImageView"
+            android:src="@drawable/ic_home_white_24dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/FooterImageView"
+            android:layout_marginStart="@dimen/margin_footer_img"
+            android:src="@drawable/ic_search_white_24dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/FooterImageView"
+            android:layout_marginStart="@dimen/margin_footer_img"
+            android:src="@drawable/ic_smart_display_white_24dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/FooterImageView"
+            android:layout_marginStart="@dimen/margin_footer_img"
+            android:src="@drawable/ic_file_download_white_24dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/FooterImageView"
+            android:layout_marginStart="@dimen/margin_footer_img"
+            android:src="@drawable/ic_menu_black_24dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
