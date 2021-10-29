@@ -1,6 +1,5 @@
 package com.jmancebo.pmpd_playground.ut02
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatImageView
@@ -76,14 +75,14 @@ class TapaActivity : AppCompatActivity() {
     }
 
     private fun setNewRestaurantText() {
-        val newRes: AppCompatTextView = findViewById(R.id.new_restaurant)
-        newRes.text = getText(R.string.new_res)
+        val newRestaurant: AppCompatTextView = findViewById(R.id.new_restaurant)
+        newRestaurant.text = getText(R.string.new_res)
     }
 
 
     private fun setPromoRestaurantText() {
-        val promoRest: AppCompatTextView = findViewById(R.id.restaurant1_promo)
-        promoRest.setText(R.string.promo)
+        val promoRestaurant: AppCompatTextView = findViewById(R.id.restaurant1_promo)
+        promoRestaurant.setText(R.string.promo)
     }
 
     private fun setUpRatingBarWithChanges() {
@@ -96,9 +95,9 @@ class TapaActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private fun setRatingText(rating: Float = 0f, numStars: Int) {
-        val resRating1: AppCompatTextView = findViewById(R.id.restaurant1_rating)
-        resRating1.text = "Puntuación: $rating/$numStars"
+        val restaurantRating: AppCompatTextView = findViewById(R.id.restaurant1_rating)
+        restaurantRating.text =
+            getString(R.string.info_rating_food, rating.toDouble().toString(), numStars)
     }
 }
