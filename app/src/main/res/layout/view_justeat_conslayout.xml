@@ -48,7 +48,7 @@
             android:id="@+id/res_tittle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/rest_1"
+            tools:text="@string/rest_name_1"
             android:textColor="@color/black"
             android:textSize="@dimen/title_size"
             android:textStyle="bold"
@@ -62,7 +62,7 @@
             android:id="@+id/res_food1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/food"
+            tools:text="@string/rest_food1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
             android:id="@+id/res_deliver1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/deliver"
+            tools:text="@string/rest_deliver1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +94,7 @@
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/distance"
+            tools:text="@string/rest_distance1"
             app:layout_constraintStart_toEndOf="@id/res_ic_loc1"
             app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
 
@@ -111,7 +111,7 @@
             style="@style/margins_second_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/time"
+            tools:text="@string/rest_time1"
             app:layout_constraintStart_toEndOf="@id/res_ic_clock1"
             app:layout_constraintTop_toBottomOf="@id/res_dist1" />
 
