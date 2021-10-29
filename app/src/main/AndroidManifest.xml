@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMPDPlayGround">
         <activity
+            android:name=".ut02.TapaActivity"
+            android:exported="true" />
+        <activity
             android:name=".ut3.UiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ut02.TapaModelActivity"
             android:exported="true">
 
             <intent-filter>
@@ -19,9 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
     </application>
 
 </manifest>

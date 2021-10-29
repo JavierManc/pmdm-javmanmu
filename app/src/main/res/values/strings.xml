@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">PMPD-PlayGround</string>
     <string name="name_image">Nombre de la imagen</string>
+
+    <string name="open_restaurant">1 restuarante abierto</string>
+
+    <string name="restaurant1_name">Casa Merani</string>
+    <string name="restaurant1_food">Sandwitches. Otros</string>
+    <string name="restaurant1_deliver">Entrega gratuita. Pedido mínimo 8€</string>
+    <string name="restaurant1_distance">0,4 km</string>
+    <string name="restaurant1_estimated_time">35–60 mins</string>
+    <string name="new_res">Nuevo</string>
+    <string name="rating">Rating:</string>
+    <string name="promo">Patrocinado</string>
+    <string name="info_rating_food">Puntuación %1$s/%2$d</string>
     <string name="programs">Programas</string>
     <string name="films">Películas</string>
     <string name="list">Mi lista</string>
