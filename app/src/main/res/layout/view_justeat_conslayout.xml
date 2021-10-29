@@ -15,7 +15,7 @@
         tools:src="@drawable/tapa1" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/logo_res1"
+        android:id="@+id/res_logo1"
         style="@style/logo_style"
         tools:src="@drawable/casameranilogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,28 +24,28 @@
         app:layout_constraintTop_toBottomOf="@id/bg_image1" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/promo_res1"
+        android:id="@+id/res_promo1"
         style="@style/promo_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/gray_dif"
         tools:text="@string/promo"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/lay_desc_rest1"
+        app:layout_constraintBottom_toTopOf="@id/res_description1"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="@dimen/text_padding"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/lay_desc_rest1"
+        android:id="@+id/res_description1"
         style="@style/lay_restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_res1">
+        app:layout_constraintTop_toBottomOf="@id/res_logo1">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title_res"
+            android:id="@+id/res_tittle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="@string/rest_1"
@@ -66,7 +66,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_res"
+            app:layout_constraintTop_toBottomOf="@id/res_tittle1"
             android:padding="@dimen/text_padding"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -81,7 +81,7 @@
             android:padding="@dimen/text_padding"/>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ic_loc1"
+            android:id="@+id/res_ic_loc1"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,16 +95,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="@string/distance"
-            app:layout_constraintStart_toEndOf="@id/ic_loc1"
+            app:layout_constraintStart_toEndOf="@id/res_ic_loc1"
             app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ic_clock1"
+            android:id="@+id/res_ic_clock1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:src="@drawable/ic_clock_black_24dp"
             app:layout_constraintEnd_toStartOf="@id/res_time1"
-            app:layout_constraintTop_toBottomOf="@id/ic_loc1" />
+            app:layout_constraintTop_toBottomOf="@id/res_ic_loc1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/res_time1"
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="@string/time"
-            app:layout_constraintStart_toEndOf="@id/ic_clock1"
+            app:layout_constraintStart_toEndOf="@id/res_ic_clock1"
             app:layout_constraintTop_toBottomOf="@id/res_dist1" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -138,7 +138,7 @@
 
         <!-- RatingBar  -->
         <androidx.appcompat.widget.AppCompatRatingBar
-            android:id="@+id/rating_bar1"
+            android:id="@+id/res_rating_bar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"

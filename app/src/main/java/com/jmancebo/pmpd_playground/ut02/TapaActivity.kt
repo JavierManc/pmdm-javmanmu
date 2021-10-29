@@ -31,7 +31,7 @@ class TapaActivity : AppCompatActivity() {
     }
 
     private fun setRestaurantTitle() {
-        val labelTitRes: AppCompatTextView = findViewById(R.id.title_res)
+        val labelTitRes: AppCompatTextView = findViewById(R.id.res_tittle1)
         labelTitRes.text = getText(R.string.rest_1)
     }
 
@@ -41,7 +41,7 @@ class TapaActivity : AppCompatActivity() {
     }
 
     private fun setUpRestaurantImage() {
-        val image: AppCompatImageView = findViewById(R.id.logo_res1)
+        val image: AppCompatImageView = findViewById(R.id.res_logo1)
         image.setImageResource(R.drawable.casameranilogo)
     }
 
@@ -56,12 +56,12 @@ class TapaActivity : AppCompatActivity() {
     }
 
     private fun setUpLocationImage() {
-        val imageLoc: AppCompatImageView = findViewById(R.id.ic_loc1)
+        val imageLoc: AppCompatImageView = findViewById(R.id.res_ic_loc1)
         imageLoc.setImageResource(R.drawable.ic_location_on_black_24dp)
     }
 
     private fun setUpClockImage() {
-        val imageClock: AppCompatImageView = findViewById(R.id.ic_clock1)
+        val imageClock: AppCompatImageView = findViewById(R.id.res_ic_clock1)
         imageClock.setImageResource(R.drawable.ic_clock_black_24dp)
     }
 
@@ -82,12 +82,12 @@ class TapaActivity : AppCompatActivity() {
 
 
     private fun setPromoRestaurantText() {
-        val promoRest: AppCompatTextView = findViewById(R.id.promo_res1)
+        val promoRest: AppCompatTextView = findViewById(R.id.res_promo1)
         promoRest.setText(R.string.promo)
     }
 
     private fun setUpRatingBarWithChanges() {
-        val ratingBarChanges: AppCompatRatingBar = findViewById(R.id.rating_bar1)
+        val ratingBarChanges: AppCompatRatingBar = findViewById(R.id.res_rating_bar1)
 
         setRatingText(numStars = ratingBarChanges.numStars)
 

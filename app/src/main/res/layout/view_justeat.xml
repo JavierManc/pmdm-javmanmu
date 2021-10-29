@@ -15,7 +15,7 @@
 
     <!-- Imágen del logo del restaurante -->
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/logo_res1"
+        android:id="@+id/res_logo1"
         style="@style/logo_style"
         android:layout_below="@id/img_tapa1"
         android:layout_centerHorizontal="true"
@@ -27,7 +27,7 @@
         style="@style/lay_restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo_res1">
+        android:layout_below="@id/res_logo1">
 
         <!-- Título o nombre -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -60,7 +60,7 @@
 
         <!-- Imágen con texto sobre localización -->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ic_loc1"
+            android:id="@+id/res_ic_loc1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/res_deliver1"
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/res_deliver1"
-            android:layout_toEndOf="@id/ic_loc1"
+            android:layout_toEndOf="@id/res_ic_loc1"
             android:text="@string/distance" />
 
         <!-- Imágen y texto sobre el tiempo de entrega -->
@@ -81,7 +81,7 @@
             android:id="@+id/res_clock1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ic_loc1"
+            android:layout_below="@id/res_ic_loc1"
             android:src="@drawable/ic_clock_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView

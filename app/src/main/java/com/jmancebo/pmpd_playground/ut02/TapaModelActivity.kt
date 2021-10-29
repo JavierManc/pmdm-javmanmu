@@ -25,7 +25,7 @@ class TapaModelActivity : AppCompatActivity() {
     }
 
     private fun setUpView() {
-        labelTitResText = findViewById(R.id.title_res)
+        labelTitResText = findViewById(R.id.res_tittle1)
         labelFoodText = findViewById(R.id.res_food1)
         labelDeliverText = findViewById(R.id.res_deliver1)
         labelDistanceText = findViewById(R.id.res_dist1)
@@ -44,22 +44,22 @@ class TapaModelActivity : AppCompatActivity() {
     }
 
     private fun setUpRestaurantImage() {
-        val image: AppCompatImageView = findViewById(R.id.logo_res1)
+        val image: AppCompatImageView = findViewById(R.id.res_logo1)
         image.setImageResource(R.drawable.casameranilogo)
     }
 
     private fun setUpLocationImage() {
-        val imageLoc: AppCompatImageView = findViewById(R.id.ic_loc1)
+        val imageLoc: AppCompatImageView = findViewById(R.id.res_ic_loc1)
         imageLoc.setImageResource(R.drawable.ic_location_on_black_24dp)
     }
 
     private fun setUpClockImage() {
-        val imageClock: AppCompatImageView = findViewById(R.id.ic_clock1)
+        val imageClock: AppCompatImageView = findViewById(R.id.res_ic_clock1)
         imageClock.setImageResource(R.drawable.ic_clock_black_24dp)
     }
 
     private fun setUpRatingBarWithChanges() {
-        val ratingBarChanges: AppCompatRatingBar = findViewById(R.id.rating_bar1)
+        val ratingBarChanges: AppCompatRatingBar = findViewById(R.id.res_rating_bar1)
 
         setRatingText(numStars = ratingBarChanges.numStars)
 
