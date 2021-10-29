@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- VISTAS DE JUSTEAT -->
 
     <!-- Estilo que agrupa dimensiones y márgenes del logo del restaurante -->
-    <style name="logo_style">
+    <style name="RestaurantLogoStyle">
         <item name="android:layout_width">@dimen/logo_width_height</item>
         <item name="android:layout_height">@dimen/logo_width_height</item>
         <item name="android:layout_marginTop">@dimen/logo_margin_top</item>
     </style>
 
     <!-- Estilo del relative layout con los datos del restaurante -->
-    <style name="restaurant1_layout">
+    <style name="RestaurantLayoutStyle">
         <item name="android:layout_marginStart">@dimen/lay_margin_start</item>
         <item name="android:layout_marginTop">@dimen/lay_margin_top</item>
         <item name="android:layout_marginEnd">@dimen/lay_margin_end</item>
@@ -18,7 +19,7 @@
     </style>
 
     <!-- Estilo del título del restaurante -->
-    <style name="title_style">
+    <style name="RestaurantTitleStyle">
         <item name="android:textSize">@dimen/title_size</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/black</item>
@@ -26,34 +27,37 @@
     </style>
 
     <!-- Estilo de la descripción del restaurante -->
-    <style name="desc_style">
+    <style name="RestaurantDescriptionStyle">
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:textSize">@dimen/desc_text_size</item>
     </style>
 
     <!-- Estilo que agrupa los márgenes de la primera fila de objetos que se encuentran debajo de la descripción -->
-    <style name="margins_first_row">
+    <style name="RestaurantDescriptionFirstRowStyle">
         <item name="android:layout_marginStart">@dimen/row_margin_start</item>
         <item name="android:layout_marginTop">@dimen/row_margin_top</item>
     </style>
 
     <!-- Estilo que agrupa los márgenes de la primera fila de objetos que se encuentran debajo de la primera fila de objetos -->
-    <style name="margins_second_row">
+    <style name="RestaurantDescriptionSecondRowStyle">
         <item name="android:layout_marginStart">@dimen/row2_margin_start</item>
         <item name="android:layout_marginTop">@dimen/row2_margin_top</item>
     </style>
 
     <!-- Estilo que agrupa las dimensiones de las estrellas de valoración -->
-    <style name="img_stars">
+    <style name="RestaurantRatingImagesStyle">
         <item name="android:layout_width">@dimen/star_width_height</item>
         <item name="android:layout_height">@dimen/star_width_height</item>
     </style>
 
     <!-- Estilo del rectángulo de si el restaurante está patrocinado -->
-    <style name="promo_style">
+    <style name="RestaurantPromoStyle">
         <item name="android:textSize">@dimen/promo_text_size</item>
         <item name="android:layout_marginEnd">@dimen/promo_margin_end</item>
     </style>
+
+    <!-- VISTAS DE NETFLIX -->
+
     <!-- EStilo para el avatar del listado de usuarios -->
     <style name="AvatarView">
         <item name="android:layout_width">@dimen/avatar_width</item>

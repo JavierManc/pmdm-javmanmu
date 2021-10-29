@@ -16,7 +16,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/restaurant1_logo"
-        style="@style/logo_style"
+        style="@style/RestaurantLogoStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/restaurant1_promo"
-        style="@style/promo_style"
+        style="@style/RestaurantPromoStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/gray_dif"
@@ -37,7 +37,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/restaurant1_description"
-        style="@style/restaurant1_layout"
+        style="@style/RestaurantLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -82,7 +82,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/restauran1_location_icon"
-            style="@style/margins_first_row"
+            style="@style/RestaurantDescriptionFirstRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@id/restaurant1_distance"
@@ -91,7 +91,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_distance"
-            style="@style/margins_first_row"
+            style="@style/RestaurantDescriptionFirstRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/restauran1_location_icon"
@@ -108,7 +108,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_estimated_time"
-            style="@style/margins_second_row"
+            style="@style/RestaurantDescriptionSecondRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/restaurant1_clock_icon"
@@ -117,7 +117,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/new_restaurant"
-            style="@style/margins_first_row"
+            style="@style/RestaurantDescriptionFirstRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/teal_700"

@@ -16,7 +16,7 @@
     <!-- Imágen del logo del restaurante -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/restaurant1_logo"
-        style="@style/logo_style"
+        style="@style/RestaurantLogoStyle"
         android:layout_below="@id/restaurant1_background_image"
         android:layout_centerHorizontal="true"
         android:src="@drawable/casameranilogo"
@@ -24,7 +24,7 @@
 
     <!-- Layout con los datos del restaurante -->
     <RelativeLayout
-        style="@style/restaurant1_layout"
+        style="@style/RestaurantLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/restaurant1_logo">
@@ -32,7 +32,7 @@
         <!-- Título o nombre -->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_tittle"
-            style="@style/title_style"
+            style="@style/RestaurantTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/text_padding"
@@ -41,7 +41,7 @@
         <!-- Descripción -->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_food"
-            style="@style/desc_style"
+            style="@style/RestaurantDescriptionStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_tittle"
@@ -50,7 +50,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_deliver_time"
-            style="@style/desc_style"
+            style="@style/RestaurantDescriptionStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_food"
@@ -69,7 +69,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_distance"
-            style="@style/margins_first_row"
+            style="@style/RestaurantDescriptionFirstRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_deliver_time"
@@ -85,7 +85,7 @@
             android:src="@drawable/ic_clock_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            style="@style/margins_second_row"
+            style="@style/RestaurantDescriptionSecondRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_distance"
@@ -95,7 +95,7 @@
         <!-- Información sobre si el restaurante es nuevo -->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/new_restaurant"
-            style="@style/margins_first_row"
+            style="@style/RestaurantDescriptionFirstRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_deliver_time"
@@ -105,7 +105,7 @@
 
         <!-- Estrellas de valoración -->
         <androidx.appcompat.widget.LinearLayoutCompat
-            style="@style/margins_second_row"
+            style="@style/RestaurantDescriptionSecondRowStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/new_restaurant"
@@ -113,23 +113,23 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatImageView
-                style="@style/img_stars"
+                style="@style/RestaurantRatingImagesStyle"
                 android:src="@drawable/ic_star_yellow_24dp" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                style="@style/img_stars"
+                style="@style/RestaurantRatingImagesStyle"
                 android:src="@drawable/ic_star_yellow_24dp" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                style="@style/img_stars"
+                style="@style/RestaurantRatingImagesStyle"
                 android:src="@drawable/ic_star_yellow_24dp" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                style="@style/img_stars"
+                style="@style/RestaurantRatingImagesStyle"
                 android:src="@drawable/ic_star_yellow_24dp" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                style="@style/img_stars"
+                style="@style/RestaurantRatingImagesStyle"
                 android:src="@drawable/ic_star_border_yellow_24dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
