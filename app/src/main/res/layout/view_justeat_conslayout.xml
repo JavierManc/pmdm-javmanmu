@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/bg_image1"
+        android:id="@+id/restaurant1_background_image"
         android:layout_width="match_parent"
         android:layout_height="@dimen/img_height"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -15,40 +15,40 @@
         tools:src="@drawable/tapa1" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/res_logo1"
+        android:id="@+id/restaurant1_logo"
         style="@style/logo_style"
-        tools:src="@drawable/casameranilogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bg_image1" />
+        app:layout_constraintTop_toBottomOf="@id/restaurant1_background_image"
+        tools:src="@drawable/casameranilogo" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/res_promo1"
+        android:id="@+id/restaurant1_promo"
         style="@style/promo_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/gray_dif"
-        tools:text="@string/promo"
+        android:padding="@dimen/text_padding"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/res_description1"
+        app:layout_constraintBottom_toTopOf="@id/restaurant1_description"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="@dimen/text_padding"/>
+        tools:text="@string/promo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/res_description1"
-        style="@style/lay_restaurant"
+        android:id="@+id/restaurant1_description"
+        style="@style/restaurant1_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/res_logo1">
+        app:layout_constraintTop_toBottomOf="@id/restaurant1_logo">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_tittle1"
+            android:id="@+id/restaurant1_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/rest_name_1"
+            android:padding="@dimen/text_padding"
             android:textColor="@color/black"
             android:textSize="@dimen/title_size"
             android:textStyle="bold"
@@ -56,100 +56,99 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:padding="@dimen/text_padding"/>
+            tools:text="@string/rest_name_1" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_food1"
+            android:id="@+id/restaurant1_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/rest_food1"
+            android:padding="@dimen/text_padding"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/res_tittle1"
-            android:padding="@dimen/text_padding"/>
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_name"
+            tools:text="@string/rest_food1" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_deliver1"
+            android:id="@+id/restaurant1_deliver_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/rest_deliver1"
+            android:padding="@dimen/text_padding"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/res_food1"
-            android:padding="@dimen/text_padding"/>
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_food"
+            tools:text="@string/rest_deliver1" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res_ic_loc1"
+            android:id="@+id/restauran1_location_icon"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:src="@drawable/ic_location_on_black_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res_dist1"
-            app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
+            app:layout_constraintEnd_toStartOf="@id/restaurant1_distance"
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_deliver_time"
+            tools:src="@drawable/ic_location_on_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_dist1"
+            android:id="@+id/restaurant1_distance"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/rest_distance1"
-            app:layout_constraintStart_toEndOf="@id/res_ic_loc1"
-            app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
+            app:layout_constraintStart_toEndOf="@id/restauran1_location_icon"
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_deliver_time"
+            tools:text="@string/rest_distance1" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res_ic_clock1"
+            android:id="@+id/restaurant1_clock_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:src="@drawable/ic_clock_black_24dp"
-            app:layout_constraintEnd_toStartOf="@id/res_time1"
-            app:layout_constraintTop_toBottomOf="@id/res_ic_loc1" />
+            app:layout_constraintEnd_toStartOf="@id/restaurant1_estimated_time"
+            app:layout_constraintTop_toBottomOf="@id/restauran1_location_icon"
+            tools:src="@drawable/ic_clock_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_time1"
+            android:id="@+id/restaurant1_estimated_time"
             style="@style/margins_second_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/rest_time1"
-            app:layout_constraintStart_toEndOf="@id/res_ic_clock1"
-            app:layout_constraintTop_toBottomOf="@id/res_dist1" />
+            app:layout_constraintStart_toEndOf="@id/restaurant1_clock_icon"
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_distance"
+            tools:text="@string/rest_time1" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/new_res"
+            android:id="@+id/new_restaurant"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/new_res"
             android:textColor="@color/teal_700"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/res_deliver1" />
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_deliver_time"
+            tools:text="@string/new_res" />
 
         <!-- Estrellas -->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_rating1"
+            android:id="@+id/restaurant1_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/star_margin_top"
-            tools:text="@string/rating"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/new_res" />
+            app:layout_constraintTop_toBottomOf="@id/new_restaurant"
+            tools:text="@string/rating" />
 
         <!-- RatingBar  -->
         <androidx.appcompat.widget.AppCompatRatingBar
-            android:id="@+id/res_rating_bar1"
+            android:id="@+id/restaurant_rating_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="2.5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/res_time1"
-            android:scaleX="0.5"
-            android:scaleY="0.5" />
-
+            app:layout_constraintTop_toBottomOf="@id/restaurant1_estimated_time" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

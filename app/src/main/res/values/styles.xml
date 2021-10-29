@@ -9,7 +9,7 @@
     </style>
 
     <!-- Estilo del relative layout con los datos del restaurante -->
-    <style name="lay_restaurant">
+    <style name="restaurant1_layout">
         <item name="android:layout_marginStart">@dimen/lay_margin_start</item>
         <item name="android:layout_marginTop">@dimen/lay_margin_top</item>
         <item name="android:layout_marginEnd">@dimen/lay_margin_end</item>

@@ -31,63 +31,63 @@ class TapaActivity : AppCompatActivity() {
     }
 
     private fun setRestaurantTitle() {
-        val labelTitRes: AppCompatTextView = findViewById(R.id.res_tittle1)
+        val labelTitRes: AppCompatTextView = findViewById(R.id.restaurant1_name)
         labelTitRes.text = getText(R.string.rest_name_1)
     }
 
     private fun setUpImageFood() {
-        val image: AppCompatImageView = findViewById(R.id.bg_image1)
+        val image: AppCompatImageView = findViewById(R.id.restaurant1_background_image)
         image.setImageResource(R.drawable.tapa1)
     }
 
     private fun setUpRestaurantImage() {
-        val image: AppCompatImageView = findViewById(R.id.res_logo1)
+        val image: AppCompatImageView = findViewById(R.id.restaurant1_logo)
         image.setImageResource(R.drawable.casameranilogo)
     }
 
     private fun setFoodText() {
-        val text: AppCompatTextView = findViewById(R.id.res_food1)
+        val text: AppCompatTextView = findViewById(R.id.restaurant1_food)
         text.text = getText(R.string.rest_food1)
     }
 
     private fun setDeliverText() {
-        val text: AppCompatTextView = findViewById(R.id.res_deliver1)
+        val text: AppCompatTextView = findViewById(R.id.restaurant1_deliver_time)
         text.text = getText(R.string.rest_deliver1)
     }
 
     private fun setUpLocationImage() {
-        val imageLoc: AppCompatImageView = findViewById(R.id.res_ic_loc1)
+        val imageLoc: AppCompatImageView = findViewById(R.id.restauran1_location_icon)
         imageLoc.setImageResource(R.drawable.ic_location_on_black_24dp)
     }
 
     private fun setUpClockImage() {
-        val imageClock: AppCompatImageView = findViewById(R.id.res_ic_clock1)
+        val imageClock: AppCompatImageView = findViewById(R.id.restaurant1_clock_icon)
         imageClock.setImageResource(R.drawable.ic_clock_black_24dp)
     }
 
     private fun setDistanceText() {
-        val text: AppCompatTextView = findViewById(R.id.res_dist1)
+        val text: AppCompatTextView = findViewById(R.id.restaurant1_distance)
         text.text = getText(R.string.rest_distance1)
     }
 
     private fun setTimeText() {
-        val timeText: AppCompatTextView = findViewById(R.id.res_time1)
+        val timeText: AppCompatTextView = findViewById(R.id.restaurant1_estimated_time)
         timeText.text = getText(R.string.rest_time1)
     }
 
     private fun setNewRestaurantText() {
-        val newRes: AppCompatTextView = findViewById(R.id.new_res)
+        val newRes: AppCompatTextView = findViewById(R.id.new_restaurant)
         newRes.text = getText(R.string.new_res)
     }
 
 
     private fun setPromoRestaurantText() {
-        val promoRest: AppCompatTextView = findViewById(R.id.res_promo1)
+        val promoRest: AppCompatTextView = findViewById(R.id.restaurant1_promo)
         promoRest.setText(R.string.promo)
     }
 
     private fun setUpRatingBarWithChanges() {
-        val ratingBarChanges: AppCompatRatingBar = findViewById(R.id.res_rating_bar1)
+        val ratingBarChanges: AppCompatRatingBar = findViewById(R.id.restaurant_rating_bar)
 
         setRatingText(numStars = ratingBarChanges.numStars)
 
@@ -98,7 +98,7 @@ class TapaActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setRatingText(rating: Float = 0f, numStars: Int) {
-        val resRating1: AppCompatTextView = findViewById(R.id.res_rating1)
+        val resRating1: AppCompatTextView = findViewById(R.id.restaurant1_rating)
         resRating1.text = "Puntuación: $rating/$numStars"
     }
 }

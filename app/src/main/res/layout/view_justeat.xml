@@ -7,7 +7,7 @@
 
     <!-- Imagen del restaurante (prefiero el resultado poniendo imagen en vez de ponerlo como background)-->
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_tapa1"
+        android:id="@+id/restaurant1_background_image"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/img_height"
         android:src="@drawable/tapa1"
@@ -15,90 +15,90 @@
 
     <!-- Imágen del logo del restaurante -->
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/res_logo1"
+        android:id="@+id/restaurant1_logo"
         style="@style/logo_style"
-        android:layout_below="@id/img_tapa1"
+        android:layout_below="@id/restaurant1_background_image"
         android:layout_centerHorizontal="true"
         android:src="@drawable/casameranilogo"
         tools:ignore="ContentDescription" />
 
     <!-- Layout con los datos del restaurante -->
     <RelativeLayout
-        style="@style/lay_restaurant"
+        style="@style/restaurant1_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/res_logo1">
+        android:layout_below="@id/restaurant1_logo">
 
         <!-- Título o nombre -->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_title1"
+            android:id="@+id/restaurant1_tittle"
             style="@style/title_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rest_name_1"
-            android:padding="@dimen/text_padding"/>
+            android:padding="@dimen/text_padding"
+            android:text="@string/rest_name_1" />
 
         <!-- Descripción -->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_food1"
+            android:id="@+id/restaurant1_food"
             style="@style/desc_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_title1"
-            android:text="@string/rest_food1"
-            android:padding="@dimen/text_padding"/>
+            android:layout_below="@id/restaurant1_tittle"
+            android:padding="@dimen/text_padding"
+            android:text="@string/rest_food1" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_deliver1"
+            android:id="@+id/restaurant1_deliver_time"
             style="@style/desc_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_food1"
-            android:text="@string/rest_deliver1"
-            android:padding="@dimen/text_padding"/>
+            android:layout_below="@id/restaurant1_food"
+            android:padding="@dimen/text_padding"
+            android:text="@string/rest_deliver1" />
 
 
         <!-- Imágen con texto sobre localización -->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res_ic_loc1"
+            android:id="@+id/restauran1_location_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_deliver1"
+            android:layout_below="@id/restaurant1_deliver_time"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_location_on_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/res_dist1"
+            android:id="@+id/restaurant1_distance"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_deliver1"
-            android:layout_toEndOf="@id/res_ic_loc1"
+            android:layout_below="@id/restaurant1_deliver_time"
+            android:layout_toEndOf="@id/restauran1_location_icon"
             android:text="@string/rest_distance1" />
 
         <!-- Imágen y texto sobre el tiempo de entrega -->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/res_clock1"
+            android:id="@+id/restaurant1_clock_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_ic_loc1"
+            android:layout_below="@id/restauran1_location_icon"
             android:src="@drawable/ic_clock_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/margins_second_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_dist1"
-            android:layout_toEndOf="@id/res_clock1"
+            android:layout_below="@id/restaurant1_distance"
+            android:layout_toEndOf="@id/restaurant1_clock_icon"
             android:text="@string/rest_time1" />
 
         <!-- Información sobre si el restaurante es nuevo -->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/new_res"
+            android:id="@+id/new_restaurant"
             style="@style/margins_first_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/res_deliver1"
+            android:layout_below="@id/restaurant1_deliver_time"
             android:layout_alignParentEnd="true"
             android:text="@string/new_res"
             android:textColor="@color/teal_700" />
@@ -108,7 +108,7 @@
             style="@style/margins_second_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/new_res"
+            android:layout_below="@id/new_restaurant"
             android:layout_alignParentEnd="true"
             android:orientation="horizontal">
 
