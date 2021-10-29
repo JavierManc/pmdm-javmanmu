@@ -56,7 +56,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/rest_name_1" />
+            tools:text="@string/restaurant1_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_food"
@@ -67,7 +67,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/restaurant1_name"
-            tools:text="@string/rest_food1" />
+            tools:text="@string/restaurant1_food" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_deliver_time"
@@ -78,7 +78,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/restaurant1_food"
-            tools:text="@string/rest_deliver1" />
+            tools:text="@string/restaurant1_deliver" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/restauran1_location_icon"
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/restauran1_location_icon"
             app:layout_constraintTop_toBottomOf="@id/restaurant1_deliver_time"
-            tools:text="@string/rest_distance1" />
+            tools:text="@string/restaurant1_distance" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/restaurant1_clock_icon"
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/restaurant1_clock_icon"
             app:layout_constraintTop_toBottomOf="@id/restaurant1_distance"
-            tools:text="@string/rest_time1" />
+            tools:text="@string/restaurant1_estimated_time" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/new_restaurant"

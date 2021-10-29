@@ -4,11 +4,11 @@
 
     <string name="open_restaurant">1 restuarante abierto</string>
 
-    <string name="rest_name_1">Casa Merani</string>
-    <string name="rest_food1">Sandwitches. Otros</string>
-    <string name="rest_deliver1">Entrega gratuita. Pedido mínimo 8€</string>
-    <string name="rest_distance1">0,4 km</string>
-    <string name="rest_time1">35–60 mins</string>
+    <string name="restaurant1_name">Casa Merani</string>
+    <string name="restaurant1_food">Sandwitches. Otros</string>
+    <string name="restaurant1_deliver">Entrega gratuita. Pedido mínimo 8€</string>
+    <string name="restaurant1_distance">0,4 km</string>
+    <string name="restaurant1_estimated_time">35–60 mins</string>
     <string name="new_res">Nuevo</string>
     <string name="rating">Rating:</string>
     <string name="promo">Patrocinado</string>

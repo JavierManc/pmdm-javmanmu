@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/text_padding"
-            android:text="@string/rest_name_1" />
+            android:text="@string/restaurant1_name" />
 
         <!-- Descripción -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_tittle"
             android:padding="@dimen/text_padding"
-            android:text="@string/rest_food1" />
+            android:text="@string/restaurant1_food" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/restaurant1_deliver_time"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_food"
             android:padding="@dimen/text_padding"
-            android:text="@string/rest_deliver1" />
+            android:text="@string/restaurant1_deliver" />
 
 
         <!-- Imágen con texto sobre localización -->
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_deliver_time"
             android:layout_toEndOf="@id/restauran1_location_icon"
-            android:text="@string/rest_distance1" />
+            android:text="@string/restaurant1_distance" />
 
         <!-- Imágen y texto sobre el tiempo de entrega -->
         <androidx.appcompat.widget.AppCompatImageView
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurant1_distance"
             android:layout_toEndOf="@id/restaurant1_clock_icon"
-            android:text="@string/rest_time1" />
+            android:text="@string/restaurant1_estimated_time" />
 
         <!-- Información sobre si el restaurante es nuevo -->
         <androidx.appcompat.widget.AppCompatTextView

@@ -69,8 +69,8 @@ class TapaModelActivity : AppCompatActivity() {
     }
 
     private fun setRatingText(rating: Float = 0f, numStars: Int) {
-        val resRating1: AppCompatTextView = findViewById(R.id.restaurant1_rating)
-        resRating1.text =
+        val restaurantRating: AppCompatTextView = findViewById(R.id.restaurant1_rating)
+        restaurantRating.text =
             getString(R.string.info_rating_food, rating.toDouble().toString(), numStars)
     }
 

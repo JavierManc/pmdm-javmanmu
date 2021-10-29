@@ -31,7 +31,7 @@ class TapaActivity : AppCompatActivity() {
 
     private fun setRestaurantTitle() {
         val labelTitRes: AppCompatTextView = findViewById(R.id.restaurant1_name)
-        labelTitRes.text = getText(R.string.rest_name_1)
+        labelTitRes.text = getText(R.string.restaurant1_name)
     }
 
     private fun setUpImageFood() {
@@ -46,12 +46,12 @@ class TapaActivity : AppCompatActivity() {
 
     private fun setFoodText() {
         val text: AppCompatTextView = findViewById(R.id.restaurant1_food)
-        text.text = getText(R.string.rest_food1)
+        text.text = getText(R.string.restaurant1_food)
     }
 
     private fun setDeliverText() {
         val text: AppCompatTextView = findViewById(R.id.restaurant1_deliver_time)
-        text.text = getText(R.string.rest_deliver1)
+        text.text = getText(R.string.restaurant1_deliver)
     }
 
     private fun setUpLocationImage() {
@@ -66,12 +66,12 @@ class TapaActivity : AppCompatActivity() {
 
     private fun setDistanceText() {
         val text: AppCompatTextView = findViewById(R.id.restaurant1_distance)
-        text.text = getText(R.string.rest_distance1)
+        text.text = getText(R.string.restaurant1_distance)
     }
 
     private fun setTimeText() {
         val timeText: AppCompatTextView = findViewById(R.id.restaurant1_estimated_time)
-        timeText.text = getText(R.string.rest_time1)
+        timeText.text = getText(R.string.restaurant1_estimated_time)
     }
 
     private fun setNewRestaurantText() {
