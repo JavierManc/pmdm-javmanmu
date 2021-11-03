@@ -11,10 +11,10 @@
 
     <!-- Estilo del relative layout con los datos del restaurante -->
     <style name="RestaurantLayoutStyle">
-        <item name="android:layout_marginStart">@dimen/lay_margin_start</item>
-        <item name="android:layout_marginTop">@dimen/lay_margin_top</item>
-        <item name="android:layout_marginEnd">@dimen/lay_margin_end</item>
-        <item name="android:padding">@dimen/lay_padding</item>
+        <item name="android:layout_marginStart">@dimen/description_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/description_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/description_margin_end</item>
+        <item name="android:padding">@dimen/description_padding</item>
         <item name="android:background">@color/white</item>
     </style>
 
@@ -29,7 +29,7 @@
     <!-- Estilo de la descripción del restaurante -->
     <style name="RestaurantDescriptionStyle">
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:textSize">@dimen/desc_text_size</item>
+        <item name="android:textSize">@dimen/description_text_size</item>
     </style>
 
     <!-- Estilo que agrupa los márgenes de la primera fila de objetos que se encuentran debajo de la descripción -->
@@ -89,7 +89,7 @@
 
     <!-- Estilo para las descripciones -->
     <style name="ImageDescriptions">
-        <item name="android:textSize">@dimen/desc_text_size</item>
+        <item name="android:textSize">@dimen/description_text_size</item>
         <item name="android:textColor">@color/gray_white</item>
         <item name="android:layout_marginStart">@dimen/margin_start_it</item>
     </style>

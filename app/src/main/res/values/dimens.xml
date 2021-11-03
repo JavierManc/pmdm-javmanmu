@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- DIMENS DE VISTAS JUSTEAT -->
+
     <!-- Dimens logo restaurante -->
     <dimen name="logo_width_height">60dp</dimen>
     <dimen name="logo_margin_top">-120dp</dimen>
 
-    <!-- Dimens relative layout del restaurante -->
-    <dimen name="lay_margin_start">10dp</dimen>
-    <dimen name="lay_margin_top">-5dp</dimen>
-    <dimen name="lay_margin_end">10dp</dimen>
-    <dimen name="lay_padding">5dp</dimen>
+    <!-- Dimens layout de la descripción del restaurante  -->
+    <dimen name="description_margin_start">10dp</dimen>
+    <dimen name="description_margin_top">-5dp</dimen>
+    <dimen name="description_margin_end">10dp</dimen>
+    <dimen name="description_padding">5dp</dimen>
 
     <!-- Dimen de cada título del restaurante -->
     <dimen name="title_size">15sp</dimen>
 
-    <!-- Dimen descripcion restaurante -->
-    <dimen name="desc_text_size">13sp</dimen>
+    <!-- Dimen tamaño de texto en la descripcion restaurante -->
+    <dimen name="description_text_size">13sp</dimen>
 
     <!-- Dimens márgenes de la primera fila de objetos -->
     <dimen name="row_margin_start">5dp</dimen>
@@ -34,7 +36,7 @@
     <dimen name="star_margin_top">5dp</dimen>
 
     <!-- Dimen del tamaño de la altura de la imágen de fondo -->
-    <dimen name="img_height">300dp</dimen>
+    <dimen name="background_image_height">300dp</dimen>
 
     <!-- Dimen del texto de patrocinado -->
     <dimen name="promo_margin_end">10dp</dimen>
@@ -43,6 +45,10 @@
     <!-- Dimen del relleno entre textos -->
     <dimen name="text_padding">4dp</dimen>
 
+
+    <!-- DIMENS DE VISTAS DE NETFLIX -->
+
+    <!-- Má-->
     <dimen name="space_horizontal">8dp</dimen>
 
     <dimen name="avatar_width">114dp</dimen>

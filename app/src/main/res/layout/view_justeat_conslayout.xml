@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/restaurant1_background_image"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/img_height"
+        android:layout_height="@dimen/background_image_height"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/tapa1" />
