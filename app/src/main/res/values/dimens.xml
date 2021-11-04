@@ -79,4 +79,13 @@
     <dimen name="margin_start_header_view1">5dp</dimen>
 
     <dimen name="margin_footer_img">30dp</dimen>
+
+    <!-- DIMENS DE LA VISTA DE ALERTA -->
+
+    <!-- Márgenes de los bloques -->
+    <dimen name="block_margin">10dp</dimen>
+
+    <!-- Márgenes utilizados en el bloque de información  -->
+    <dimen name="block_margin_top_start">5dp</dimen>
+
 </resources>
