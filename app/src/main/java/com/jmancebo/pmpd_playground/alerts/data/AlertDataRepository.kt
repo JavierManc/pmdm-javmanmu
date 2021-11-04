@@ -13,7 +13,7 @@ class AlertDataRepository(): AlertRepository {
                 1,
                 "Summary del primer alertmodel",
                 "04/11/2022",
-                "Este es el body del primer alertmodel",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet lorem a metus aliquam, faucibus fermentum massa condimentum. Vivamus erat tellus, rhoncus et iaculis sed, condimentum quis augue. Aliquam erat volutpat. Duis venenatis sit amet velit quis egestas. Sed non diam scelerisque, ullamcorper augue nec, pellentesque nulla. Suspendisse porttitor at sapien varius facilisis. In mollis augue id sem laoreet rhoncus. Pellentesque aliquet pretium risus vel maximus.",
                 "Source del primer alertmodel",
                 mutableListOf()
             )
