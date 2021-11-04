@@ -43,7 +43,7 @@
             android:textColor="@color/gray_white"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/info_description_text"
+            android:id="@+id/info_body_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Texto en el que se introduce la descripción de la información"
