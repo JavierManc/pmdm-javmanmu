@@ -35,7 +35,7 @@ class AlertActivity : AppCompatActivity() {
     }
 
     private fun render() {
-        val alert = alertModel.getAlert().first()
+        val alert = alertModel.getAlerts().first()
         viewBanding.infoTitleText.text = alert.title
         viewBanding.infoDateText.text = alert.datePublished
         viewBanding.infoBodyText.text = alert.body
