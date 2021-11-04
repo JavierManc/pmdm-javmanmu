@@ -43,12 +43,4 @@
         app:layout_constraintTop_toBottomOf="@id/info_date_text"
         tools:text="Texto en el que se introduce la descripción de la información" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/info_body_text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/info_body_text"
-        app:layout_constraintTop_toBottomOf="@id/info_body_text"
-        tools:text="Texto 2 en el que se introduce la descripción de la información" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
