@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMPDPlayGround">
         <activity
+            android:name=".alerts.presentation.AlertActivity"
+            android:exported="true" />
+        <activity
             android:name=".ut02.TapaActivity"
             android:exported="true" />
         <activity
@@ -21,7 +24,6 @@
         <activity
             android:name=".ut02.TapaModelActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
