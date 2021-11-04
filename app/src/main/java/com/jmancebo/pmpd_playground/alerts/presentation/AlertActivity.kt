@@ -9,11 +9,13 @@ import com.jmancebo.pmpd_playground.alerts.data.AlertDataRepository
 import com.jmancebo.pmpd_playground.alerts.domain.AlertModel
 import com.jmancebo.pmpd_playground.alerts.domain.AlertRepository
 import com.jmancebo.pmpd_playground.alerts.domain.GetAlertUseCase
+import com.jmancebo.pmpd_playground.databinding.ActivityAlertBinding
 
 class AlertActivity : AppCompatActivity() {
 
     private val alertModel: AlertViewModel = AlertViewModel(GetAlertUseCase(AlertDataRepository()))
 
+    private lateinit var viewBanding: ActivityAlertBinding
 
     lateinit var infoTitleText: AppCompatTextView
     lateinit var infoDateText: AppCompatTextView
@@ -34,8 +36,8 @@ class AlertActivity : AppCompatActivity() {
 
     private fun render() {
         val alert = alertModel.getAlert().first()
-        infoTitleText.text = alert.title
-        infoDateText.text = alert.datePublished
-        infoBodyText.text = alert.body
+        viewBanding.infoTitleText.text = alert.title
+        viewBanding.infoDateText.text = alert.datePublished
+        viewBanding.infoBodyText.text = alert.body
     }
 }
