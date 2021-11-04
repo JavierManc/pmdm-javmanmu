@@ -3,8 +3,6 @@ package com.jmancebo.pmpd_playground.alerts.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.appcompat.widget.AppCompatTextView
-import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.alerts.data.AlertDataRepository
 import com.jmancebo.pmpd_playground.alerts.domain.GetAlertUseCase
 import com.jmancebo.pmpd_playground.databinding.ActivityAlertBinding
