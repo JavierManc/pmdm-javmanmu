@@ -20,4 +20,8 @@
     <string name="view_again">Verlo nuevamente</string>
 
     <string name="preference_file_exercise_alert">ut02_alert</string>
+
+    <string name="alert_example_title">Recomendaciones de manejo. periodo estival 2021</string>
+    <string name="alert_example_date">21/06/2021</string>
+    <string name="alert_example_body">Recomendaciones de manejo. Periodo estival 2021 21 junio de 2021. Para agriculotores cosecha y post-cosecha, cosechar lo más superficial posible...</string>
 </resources>
