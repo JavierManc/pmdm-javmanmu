@@ -2,14 +2,21 @@ package com.jmancebo.pmpd_playground.alerts.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import com.jmancebo.pmpd_playground.alerts.data.AlertDataRepository
+import com.jmancebo.pmpd_playground.alerts.data.AlertRemoteSource
+import com.jmancebo.pmpd_playground.alerts.app.RetrofitApiClient
 import com.jmancebo.pmpd_playground.alerts.domain.GetAlertUseCase
 import com.jmancebo.pmpd_playground.databinding.ActivityAlertBinding
 
 class AlertActivity : AppCompatActivity() {
 
-    private val alertModel: AlertViewModel = AlertViewModel(GetAlertUseCase(AlertDataRepository()))
+    private val alertModel: AlertViewModel = AlertViewModel(
+        GetAlertUseCase(
+            AlertDataRepository(
+                AlertRemoteSource(RetrofitApiClient())
+            )
+        )
+    )
 
     private lateinit var viewBanding: ActivityAlertBinding
 
@@ -20,15 +27,18 @@ class AlertActivity : AppCompatActivity() {
     }
 
     private fun setUpBinding() {
-        val layoutInflater = LayoutInflater.from(this)
         viewBanding = ActivityAlertBinding.inflate(layoutInflater)
         setContentView(viewBanding.root)
     }
 
     private fun render() {
-        val alert = alertModel.getAlerts().first()
-        viewBanding.infoTitleText.text = alert.title
-        viewBanding.infoDateText.text = alert.datePublished
-        viewBanding.infoBodyText.text = alert.body
+        Thread {
+            val alert = alertModel.getAlerts().first()
+            runOnUiThread {
+                viewBanding.infoTitleText.text = alert.title
+                viewBanding.infoDateText.text = alert.datePublished
+                viewBanding.infoBodyText.text = alert.body
+            }
+        }.start()
     }
 }
