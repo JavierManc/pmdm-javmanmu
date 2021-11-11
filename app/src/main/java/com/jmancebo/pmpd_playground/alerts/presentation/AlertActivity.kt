@@ -2,6 +2,7 @@ package com.jmancebo.pmpd_playground.alerts.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jmancebo.pmpd_playground.alerts.data.AlertDataRepository
 import com.jmancebo.pmpd_playground.alerts.data.AlertRemoteSource
 import com.jmancebo.pmpd_playground.alerts.app.RetrofitApiClient
@@ -17,28 +18,28 @@ class AlertActivity : AppCompatActivity() {
             )
         )
     )
+    private val alertAdapter = AlertAdapter()
 
-    private lateinit var viewBanding: ActivityAlertBinding
+    private val bind: ActivityAlertBinding by lazy {
+        ActivityAlertBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setUpBinding()
-        render()
+        setContentView(bind.root)
+        setUpView()
+        setUpRecyclerView()
     }
 
-    private fun setUpBinding() {
-        viewBanding = ActivityAlertBinding.inflate(layoutInflater)
-        setContentView(viewBanding.root)
+    private fun setUpView() {
+        bind.listAlerts.adapter = alertAdapter
+        bind.listAlerts.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
-    private fun render() {
+    private fun setUpRecyclerView(){
         Thread {
-            val alert = alertModel.getAlerts().first()
-            runOnUiThread {
-                viewBanding.infoTitleText.text = alert.title
-                viewBanding.infoDateText.text = alert.datePublished
-                viewBanding.infoBodyText.text = alert.body
-            }
+            alertAdapter.setItems(alertModel.getAlerts())
         }.start()
     }
 }
