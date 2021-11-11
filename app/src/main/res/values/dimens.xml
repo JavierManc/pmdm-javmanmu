@@ -83,9 +83,20 @@
     <!-- DIMENS DE LA VISTA DE ALERTA -->
 
     <!-- Márgenes de los bloques -->
-    <dimen name="block_margin">10dp</dimen>
+    <dimen name="alert_block_margin">5dp</dimen>
 
-    <!-- Márgenes utilizados en el bloque de información  -->
-    <dimen name="block_margin_top_start">5dp</dimen>
+    <!-- Padding de los componentes de la vista -->
+    <dimen name="alert_component_padding">2dp</dimen>
 
+    <!-- Tamaño de los textos de la vista -->
+    <dimen name="alert_component_width">330dp</dimen>
+
+    <!-- Tamaño de el icono de la alerta -->
+    <dimen name="alert_icon_size">30dp</dimen>
+
+    <!-- Radio de la CardView -->
+    <dimen name="alert_corner_radio">4dp</dimen>
+
+    <!-- Márgenes de la CardView -->
+    <dimen name="alert_card_margin">8dp</dimen>
 </resources>

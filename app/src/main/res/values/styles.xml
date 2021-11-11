@@ -122,10 +122,10 @@
 
     <!-- Estilo para cada bloque de contenido -->
     <style name="infoBlockStyle">
-        <item name="android:layout_marginStart">@dimen/block_margin</item>
-        <item name="android:layout_marginEnd">@dimen/block_margin</item>
-        <item name="android:layout_marginBottom">@dimen/block_margin</item>
-        <item name="android:layout_marginTop">@dimen/block_margin_top_start</item>
+        <item name="android:layout_marginStart">@dimen/alert_block_margin</item>
+        <item name="android:layout_marginEnd">@dimen/alert_block_margin</item>
+        <item name="android:layout_marginBottom">@dimen/alert_block_margin</item>
+        <item name="android:layout_marginTop">@dimen/alert_block_margin</item>
     </style>
 
     <style name="infoTextStyle">
