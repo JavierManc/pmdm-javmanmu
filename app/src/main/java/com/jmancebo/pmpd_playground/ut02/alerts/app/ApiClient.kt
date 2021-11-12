@@ -48,7 +48,7 @@ class RetrofitApiClient() : ApiClient {
         val response = call.execute()
         return if (response.isSuccessful) {
             val alerts = response.body()!!.data
-            alerts ?: mutableListOf()
+            alerts
         } else {
             mutableListOf()
         }

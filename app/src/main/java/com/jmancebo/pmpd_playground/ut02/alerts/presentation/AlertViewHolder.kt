@@ -14,6 +14,14 @@ class AlertViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         bind.infoDateText.text = alertViewState.date
         bind.infoBodyText.text = alertViewState.body
         bind.infoIcon.setImageResource(selectIcon2(alertViewState.type))
+        itemView.setOnClickListener {
+            itemView.context.startActivity(
+                SecondActivity.getIntent(
+                    itemView.context,
+                    alertViewState.id
+                )
+            )
+        }
     }
 
     private fun selectIcon(type: Int): Int = if (type == 1) {

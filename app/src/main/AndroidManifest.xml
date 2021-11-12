@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMPDPlayGround">
         <activity
-            android:name="com.jmancebo.pmpd_playground.ut02.alerts.presentation.AlertActivity"
+            android:name=".ut02.alerts.presentation.SecondActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ut02.alerts.presentation.AlertActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
