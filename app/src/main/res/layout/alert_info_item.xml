@@ -12,13 +12,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".alerts.presentation.AlertActivity">
+        tools:context=".ut02.alerts.presentation.AlertActivity">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/info_icon"
             android:layout_width="@dimen/alert_icon_size"
             android:layout_height="@dimen/alert_icon_size"
-            android:src="@drawable/ic_info_blue_24dp"
+            tools:src="@drawable/ic_info_blue_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="@dimen/alert_block_margin"/>

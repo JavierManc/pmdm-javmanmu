@@ -2,7 +2,7 @@ package com.jmancebo.pmpd_playground.commons
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.jmancebo.pmpd_playground.alerts.domain.AlertModel
+import com.jmancebo.pmpd_playground.ut02.alerts.domain.AlertModel
 import java.lang.reflect.Type
 
 interface Serializer<T> {

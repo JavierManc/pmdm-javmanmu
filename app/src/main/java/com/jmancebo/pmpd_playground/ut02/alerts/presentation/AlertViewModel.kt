@@ -1,8 +1,8 @@
-package com.jmancebo.pmpd_playground.alerts.presentation
+package com.jmancebo.pmpd_playground.ut02.alerts.presentation
 
 import androidx.lifecycle.ViewModel
-import com.jmancebo.pmpd_playground.alerts.domain.AlertModel
-import com.jmancebo.pmpd_playground.alerts.domain.GetAlertUseCase
+import com.jmancebo.pmpd_playground.R
+import com.jmancebo.pmpd_playground.ut02.alerts.domain.GetAlertUseCase
 
 class AlertViewModel(private val getAlertUseCase: GetAlertUseCase) : ViewModel() {
 
@@ -11,6 +11,7 @@ class AlertViewModel(private val getAlertUseCase: GetAlertUseCase) : ViewModel()
         return alerts.map { alertModel ->
             AlertViewState(
                 alertModel.title,
+                alertModel.type,
                 alertModel.datePublished,
                 alertModel.body
             )

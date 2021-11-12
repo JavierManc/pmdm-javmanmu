@@ -1,7 +1,7 @@
-package com.jmancebo.pmpd_playground.alerts.data
+package com.jmancebo.pmpd_playground.ut02.alerts.data
 
-import com.jmancebo.pmpd_playground.alerts.app.ApiClient
-import com.jmancebo.pmpd_playground.alerts.domain.AlertModel
+import com.jmancebo.pmpd_playground.ut02.alerts.app.ApiClient
+import com.jmancebo.pmpd_playground.ut02.alerts.domain.AlertModel
 
 class AlertRemoteSource(private var apiClient: ApiClient) {
 

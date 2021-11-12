@@ -1,13 +1,13 @@
-package com.jmancebo.pmpd_playground.alerts.presentation
+package com.jmancebo.pmpd_playground.ut02.alerts.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.jmancebo.pmpd_playground.alerts.data.AlertDataRepository
-import com.jmancebo.pmpd_playground.alerts.data.AlertRemoteSource
-import com.jmancebo.pmpd_playground.alerts.app.RetrofitApiClient
-import com.jmancebo.pmpd_playground.alerts.domain.GetAlertUseCase
 import com.jmancebo.pmpd_playground.databinding.ActivityAlertBinding
+import com.jmancebo.pmpd_playground.ut02.alerts.app.RetrofitApiClient
+import com.jmancebo.pmpd_playground.ut02.alerts.data.AlertDataRepository
+import com.jmancebo.pmpd_playground.ut02.alerts.data.AlertRemoteSource
+import com.jmancebo.pmpd_playground.ut02.alerts.domain.GetAlertUseCase
 
 class AlertActivity : AppCompatActivity() {
 
@@ -37,9 +37,12 @@ class AlertActivity : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
-    private fun setUpRecyclerView(){
+    private fun setUpRecyclerView() {
         Thread {
-            alertAdapter.setItems(alertModel.getAlerts())
+            val alerts = alertModel.getAlerts()
+            runOnUiThread {
+                alertAdapter.setItems(alerts)
+            }
         }.start()
     }
 }

@@ -1,4 +1,4 @@
-package com.jmancebo.pmpd_playground.alerts.presentation
+package com.jmancebo.pmpd_playground.ut02.alerts.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

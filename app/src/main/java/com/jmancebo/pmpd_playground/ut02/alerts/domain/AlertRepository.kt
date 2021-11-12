@@ -1,4 +1,4 @@
-package com.jmancebo.pmpd_playground.alerts.domain
+package com.jmancebo.pmpd_playground.ut02.alerts.domain
 
 interface AlertRepository {
 
