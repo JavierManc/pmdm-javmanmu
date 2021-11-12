@@ -99,4 +99,7 @@
 
     <!-- Márgenes de la CardView -->
     <dimen name="alert_card_margin">8dp</dimen>
+
+    <!-- Corner radius de la CardView -->
+    <dimen name="alert_card_corner_radius">4dp</dimen>
 </resources>
