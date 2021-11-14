@@ -102,4 +102,7 @@
 
     <!-- Corner radius de la CardView -->
     <dimen name="alert_card_corner_radius">4dp</dimen>
+
+    <!-- Tamaño del texto del body -->
+    <dimen name="alert_text_size">12sp</dimen>
 </resources>
