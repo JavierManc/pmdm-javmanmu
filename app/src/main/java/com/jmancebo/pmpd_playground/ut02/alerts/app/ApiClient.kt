@@ -17,6 +17,20 @@ class MockApiClient() : ApiClient {
                 "Summary del primer alertmodel",
                 "1",
                 "04/11/2022"
+            ),
+            AlertApiModel(
+                "2",
+                "Título del segundo alertmodel",
+                "Summary del segundo alertmodel",
+                "2",
+                "04/11/2022"
+            ),
+            AlertApiModel(
+                "3",
+                "Título del tercer alertmodel",
+                "Summary del tercer alertmodel",
+                "1",
+                "04/11/2022"
             )
         )
     }
