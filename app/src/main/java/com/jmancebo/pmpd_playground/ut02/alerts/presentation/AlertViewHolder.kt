@@ -13,7 +13,7 @@ class AlertViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         bind.infoTitleText.text = alertViewState.title
         bind.infoDateText.text = alertViewState.date
         bind.infoBodyText.text = alertViewState.body
-        bind.infoIcon.setImageResource(selectIcon2(alertViewState.type))
+        bind.infoIcon.setImageResource(selectIcon(alertViewState.type))
         itemView.setOnClickListener {
             itemView.context.startActivity(
                 SecondActivity.getIntent(
@@ -24,17 +24,11 @@ class AlertViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         }
     }
 
-    private fun selectIcon(type: Int): Int = if (type == 1) {
-        R.drawable.ic_warning_amber_red_24dp
-    } else {
-        R.drawable.ic_info_blue_24dp
-    }
-
     /**
      * Uso de When como alternativa al IF .. ELSE
      * Alternativa IF .. ELSE
      */
-    private fun selectIcon2(type: Int): Int = when (type) {
+    private fun selectIcon(type: Int): Int = when (type) {
         1 -> R.drawable.ic_warning_amber_red_24dp
         else -> R.drawable.ic_info_blue_24dp
     }
