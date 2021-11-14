@@ -1,6 +1,6 @@
 package com.jmancebo.pmpd_playground.ut02.alerts.presentation
 
-class AlertViewState(
+data class AlertViewState(
     val id: String,
     val title: String,
     val type: Int,
