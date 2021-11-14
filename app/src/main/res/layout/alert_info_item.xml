@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/alert_card_margin"
+    card_view:cardCornerRadius="@dimen/alert_component_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ut02.alerts.presentation.AlertActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/info_icon"
+            android:layout_width="@dimen/alert_icon_size"
+            android:layout_height="@dimen/alert_icon_size"
+            android:layout_margin="@dimen/alert_block_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_info_blue_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/info_title_text"
+            style="@style/infoTextStyle"
+            android:layout_width="@dimen/alert_component_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/alert_block_margin"
+            android:padding="@dimen/alert_component_padding"
+            app:layout_constraintStart_toEndOf="@id/info_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/alert_example_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/info_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/alert_component_padding"
+            android:textColor="@color/gray_white"
+            app:layout_constraintStart_toStartOf="@id/info_title_text"
+            app:layout_constraintTop_toBottomOf="@id/info_title_text"
+            tools:text="@string/alert_example_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/info_body_text"
+            android:layout_width="@dimen/alert_component_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alert_block_margin"
+            android:padding="@dimen/alert_component_padding"
+            android:textSize="@dimen/alert_text_size"
+            app:layout_constraintStart_toStartOf="@id/info_date_text"
+            app:layout_constraintTop_toBottomOf="@id/info_date_text"
+            tools:text="@string/alert_example_body" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

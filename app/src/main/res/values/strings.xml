@@ -3,7 +3,6 @@
     <string name="name_image">Nombre de la imagen</string>
 
     <string name="open_restaurant">1 restuarante abierto</string>
-
     <string name="restaurant1_name">Casa Merani</string>
     <string name="restaurant1_food">Sandwitches. Otros</string>
     <string name="restaurant1_deliver">Entrega gratuita. Pedido mínimo 8€</string>
@@ -19,4 +18,10 @@
     <string name="populars">Populares en Netflix</string>
     <string name="trends">Tendencias</string>
     <string name="view_again">Verlo nuevamente</string>
+
+    <string name="preference_file_exercise_alert">ut02_alert</string>
+
+    <string name="alert_example_title">Recomendaciones de manejo. periodo estival 2021</string>
+    <string name="alert_example_date">21/06/2021</string>
+    <string name="alert_example_body">Recomendaciones de manejo. Periodo estival 2021 21 junio de 2021. Para agriculotores cosecha y post-cosecha, cosechar lo más superficial posible…</string>
 </resources>
