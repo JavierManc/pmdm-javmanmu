@@ -102,4 +102,24 @@
 
     <!-- Corner radius de la CardView -->
     <dimen name="alert_card_corner_radius">4dp</dimen>
+
+    <!-- DIMEN VISTA DE ALERTA EN ESPECÍFICO -->
+
+    <!-- Márgen del bloque de datos -->
+    <dimen name="especific_alert_margin">15dp</dimen>
+
+    <!-- Tamaño de texto del título -->
+    <dimen name="especific_alert_title_size">18sp</dimen>
+
+    <!-- Márgen del título con respecto al icono -->
+    <dimen name="especific_alert_title_margin">5dp</dimen>
+
+    <!-- Tamaño de ancho de las líneas divisorias -->
+    <dimen name="especific_alert_divider">1dp</dimen>
+
+    <!-- Relleno de las tablas -->
+    <dimen name="especific_alert_table_padding">3dp</dimen>
+
+    <!-- Ancho del texto de las tablas -->
+    <dimen name="especific_alert_table_widht">300dp</dimen>
 </resources>
