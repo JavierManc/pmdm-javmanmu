@@ -10,4 +10,8 @@ class AlertRemoteSource(private var apiClient: ApiClient) {
         return alerts.map { alertApiModel -> alertApiModel.toModel() }
     }
 
+    fun getAlert(alertId: String): AlertModel?{
+        return apiClient.getAlert(alertId)?.toModel()
+    }
+
 }

@@ -1,11 +1,13 @@
 package com.jmancebo.pmpd_playground.ut02.alerts.app
 
 import com.jmancebo.pmpd_playground.ut02.alerts.data.AlertApiModel
+import com.jmancebo.pmpd_playground.ut02.alerts.data.EspecificAlertApiModel
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 interface ApiClient {
     fun getAlerts(): List<AlertApiModel>
+    fun getAlert(alertId: String): EspecificAlertApiModel?
 }
 
 class MockApiClient() : ApiClient {
@@ -18,6 +20,20 @@ class MockApiClient() : ApiClient {
                 "1",
                 "04/11/2022"
             )
+        )
+    }
+
+    override fun getAlert(alertId: String): EspecificAlertApiModel {
+        return EspecificAlertApiModel(
+            "1",
+            "1",
+            "Título del primer alertmodel",
+            "1",
+            "04/11/2022",
+            "Summary del primer alertmodel",
+            "Body del primer alertmodel",
+            "Source del primer alertmodel",
+            mutableListOf(),
         )
     }
 
@@ -52,6 +68,12 @@ class RetrofitApiClient() : ApiClient {
         } else {
             mutableListOf()
         }
+    }
+
+    override fun getAlert(alertId: String): EspecificAlertApiModel? {
+        val call = apiEndPoint.getAlert(alertId)
+        val response = call.execute()
+        return response.body()?.data
     }
 
 }
