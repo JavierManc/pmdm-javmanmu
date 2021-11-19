@@ -12,4 +12,13 @@
     <color name="gray">#272727</color>
     <color name="gray_white">#CCCCCC</color>
     <color name="green">#4d8c00</color>
+
+    <color name="primaryColor">#387002</color>
+    <color name="primaryLightColor">#689f38</color>
+    <color name="primaryDarkColor">#054400</color>
+    <color name="secondaryColor">#cd4800</color>
+    <color name="secondaryLightColor">#ff7936</color>
+    <color name="secondaryDarkColor">#951000</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
 </resources>
