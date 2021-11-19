@@ -2,8 +2,6 @@ package com.jmancebo.pmpd_playground.ut02.alerts.app
 
 import com.jmancebo.pmpd_playground.ut02.alerts.data.AlertApiModel
 import com.jmancebo.pmpd_playground.ut02.alerts.data.EspecificAlertApiModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
