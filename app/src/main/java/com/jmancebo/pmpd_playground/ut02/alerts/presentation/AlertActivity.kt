@@ -1,5 +1,6 @@
 package com.jmancebo.pmpd_playground.ut02.alerts.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -84,7 +85,18 @@ class AlertActivity : AppCompatActivity() {
                 true
             }
             R.id.action_share -> {
-                showLogMessage()
+                val sharingIntent = Intent(Intent.ACTION_SEND)
+
+                sharingIntent.type = "text/plain"
+
+                val shareBody = "Pulsado botón Share"
+
+                val shareSubject = "En la app de alertas"
+
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, shareSubject)
+                startActivity(Intent.createChooser(sharingIntent, "Share using"))
                 true
             }
             android.R.id.home -> {
@@ -93,14 +105,6 @@ class AlertActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    private fun showLogMessage() {
-        Thread {
-            runOnUiThread {
-                Log.d("@dev", "Pulsado botón share")
-            }
-        }.start()
     }
 }
 
