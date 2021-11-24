@@ -7,6 +7,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.databinding.ActivityAlertBinding
@@ -39,7 +40,7 @@ class AlertActivity : AppCompatActivity() {
     private fun setUpView() {
         setContentView(bind.root)
         setupCustomToolbar()
-        setupAlertRecycler()
+        setupViewStateObservers()
     }
 
     private fun setupCustomToolbar() {
@@ -54,12 +55,15 @@ class AlertActivity : AppCompatActivity() {
     }
 
     private fun loadAlerts() {
-        Thread {
-            val alerts = alertModel.getAlerts()
-            runOnUiThread {
-                alertAdapter.setItems(alerts)
-            }
-        }.start()
+        alertModel.alertViewState
+    }
+
+    private fun setupViewStateObservers() {
+        val nameObserver = Observer<List<AlertViewState>> {
+            loadAlerts()
+            setupAlertRecycler()
+        }
+        alertModel.alertViewState.observe(this, nameObserver)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
