@@ -132,4 +132,12 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <!-- EJERCICIO DE FRAGMENTOS -->
+
+    <!-- Estilo para los textos de los formularios -->
+    <style name="fragment_form_text">
+        <item name="android:layout_marginTop">@dimen/form_margin_top</item>
+        <item name="android:textSize">@dimen/form_text_size</item>
+    </style>
 </resources>

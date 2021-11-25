@@ -125,4 +125,21 @@
 
     <!-- Ancho del texto de las tablas -->
     <dimen name="especific_alert_table_widht">300dp</dimen>
+
+
+    <!-- DIMENS DE LA ACTIVIDAD DE LOS FRAGMENTOS -->
+
+    <!-- Tamaño de texto de palabras del formulario -->
+    <dimen name="form_text_size">15sp</dimen>
+
+    <!-- Márgen superior entre las filas del formulario -->
+    <dimen name="form_margin_top">5dp</dimen>
+
+    <!-- Márgen de la cardview del listado -->
+    <dimen name="card_margin">8dp</dimen>
+
+    <!-- Radio de las esquinas del cardview -->
+    <dimen name="card_radius">2dp</dimen>
+
+
 </resources>

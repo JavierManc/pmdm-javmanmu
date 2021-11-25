@@ -27,4 +27,20 @@
 
     <string name="especific_alert_files">Ficheros descargables</string>
     <string name="especific_alert_content">Contenido del aviso</string>
+
+    <string name="fragment_form_name">Nombre</string>
+    <string name="fragment_form_surname">Apellidos</string>
+    <string name="fragment_form_comunity">Comunidad Autónoma</string>
+    <string name="fragment_form_gender">Sexo</string>
+    <string name="fragment_form_gender_male">Varón</string>
+    <string name="fragment_form_gender_female">Mujer</string>
+    <string name="fragment_form_position">Demarcación</string>
+    <string name="fragment_form_goalkeeper_position">Portero</string>
+    <string name="fragment_form_defender_position">Defensa</string>
+    <string name="fragment_form_midfield_position">Mediocentro</string>
+    <string name="fragment_form_striker_position">Delantero</string>
+    <string name="fragment_form_save">GUARDAR</string>
+    <string name="fragment_list_example_name">Jesús Navas Domínguez</string>
+    <string name="fragment_list_example_comunity">Andalucía</string>
+
 </resources>

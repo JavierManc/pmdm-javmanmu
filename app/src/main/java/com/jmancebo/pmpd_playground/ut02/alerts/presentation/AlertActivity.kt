@@ -41,6 +41,7 @@ class AlertActivity : AppCompatActivity() {
         setContentView(bind.root)
         setupCustomToolbar()
         setupViewStateObservers()
+        loadAlerts()
     }
 
     private fun setupCustomToolbar() {
@@ -60,7 +61,6 @@ class AlertActivity : AppCompatActivity() {
 
     private fun setupViewStateObservers() {
         val nameObserver = Observer<List<AlertViewState>> {
-            loadAlerts()
             setupAlertRecycler()
         }
         alertModel.alertViewState.observe(this, nameObserver)
