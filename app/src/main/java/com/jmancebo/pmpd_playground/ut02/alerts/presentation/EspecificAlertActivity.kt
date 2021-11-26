@@ -36,6 +36,7 @@ class EspecificAlertActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setUpView()
         setupObservers()
+        especificAlertViewModel.getAlertDetail(getAlertId())
     }
 
     private fun setUpView() {
@@ -50,7 +51,6 @@ class EspecificAlertActivity : AppCompatActivity() {
 
     private fun setupObservers() {
         val nameObserver = Observer<AlertViewState> { alert ->
-            especificAlertViewModel.getAlertDetail(getAlertId())
             render(alert)
         }
 

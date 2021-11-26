@@ -9,9 +9,11 @@ class AlertAdapter : RecyclerView.Adapter<AlertViewHolder>() {
 
     private val dataSet: MutableList<AlertViewState> = mutableListOf()
 
-    fun setItems(items: List<AlertViewState>){
-        dataSet.clear()
-        addItems(items)
+    fun setItems(items: List<AlertViewState>?) {
+        if (items != null) {
+            dataSet.clear()
+            addItems(items)
+        }
     }
 
     private fun addItems(items: List<AlertViewState>) {

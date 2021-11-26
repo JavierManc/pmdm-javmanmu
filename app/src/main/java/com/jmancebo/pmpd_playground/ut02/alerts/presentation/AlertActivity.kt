@@ -34,7 +34,7 @@ class AlertActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setUpView()
-        loadAlerts()
+        alertModel.getAlerts()
     }
 
     private fun setUpView() {
@@ -62,6 +62,7 @@ class AlertActivity : AppCompatActivity() {
         val nameObserver = Observer<List<AlertViewState>> {
             loadAlerts()
             setupAlertRecycler()
+            alertAdapter.setItems(alertModel.alertViewState.value)
         }
         alertModel.alertViewState.observe(this, nameObserver)
     }

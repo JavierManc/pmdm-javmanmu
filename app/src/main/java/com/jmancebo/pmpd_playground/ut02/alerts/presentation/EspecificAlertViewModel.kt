@@ -21,7 +21,7 @@ class EspecificAlertViewModel(
     }
 
     fun getAlertDetail(alertId: String) {
-        viewModelScope.launch(Dispatchers.Main) {
+        viewModelScope.launch(Dispatchers.IO) {
             val alert = getEspecificAlertUseCase.execute(alertId)
             alert?.let {
                 _alertViewState.postValue(AlertViewState.fromAlertModel(it))
