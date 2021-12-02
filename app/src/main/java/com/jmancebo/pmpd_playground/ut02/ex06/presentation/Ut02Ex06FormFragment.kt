@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
 import com.jmancebo.pmpd_playground.databinding.FragmentUt02Ex06FormBinding
@@ -15,13 +16,23 @@ class Ut02Ex06FormFragment : Fragment() {
 
     lateinit var binding: FragmentUt02Ex06FormBinding
 
-    lateinit var viewModel: Ut02Ex06FormViewModel
+    private val viewModel: Ut02Ex06FormViewModel by lazy {
+        Ut02Ex06FormViewModel(
+            SavePlayerUseCase(
+                SharedPrefLocalSource(
+                    requireContext(),
+                    GsonSerializer(Gson())
+                )
+            )
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentUt02Ex06FormBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -41,28 +52,24 @@ class Ut02Ex06FormFragment : Fragment() {
         binding.fragmentFormButton.setOnClickListener {
             val player = getPlayerParam()
             viewModel.savePlayer(player)
+            Toast.makeText(requireContext(), "Jugador añadido", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun getPlayerParam(): SavePlayerUseCase.Param {
         val positions = createPositionList()
         return SavePlayerUseCase.Param(
-            binding.formNameEdit.toString(),
-            binding.formSurnameEdit.toString(),
+            binding.formNameEdit.text.toString(),
+            binding.formSurnameEdit.text.toString(),
             binding.formComunitySelection.selectedItem.toString(),
             if (binding.formGenderFemale.isChecked) {
-                "Female"
+                "Mujer"
             } else {
-                "Male"
+                "Hombre"
             },
             positions[0],
             if (positions.size >= 2) {
                 positions[1]
-            } else {
-                ""
-            },
-            if (positions.size >= 3) {
-                positions[2]
             } else {
                 ""
             }
