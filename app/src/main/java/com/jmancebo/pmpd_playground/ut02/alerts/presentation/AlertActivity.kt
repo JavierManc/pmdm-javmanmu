@@ -54,13 +54,8 @@ class AlertActivity : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
-    private fun loadAlerts() {
-        alertModel.alertViewState
-    }
-
     private fun setupViewStateObservers() {
         val nameObserver = Observer<List<AlertViewState>> {
-            loadAlerts()
             setupAlertRecycler()
             alertAdapter.setItems(alertModel.alertViewState.value)
         }
