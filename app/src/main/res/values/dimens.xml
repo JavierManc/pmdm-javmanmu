@@ -141,5 +141,10 @@
     <!-- Radio de las esquinas del cardview -->
     <dimen name="card_radius">2dp</dimen>
 
+    <!-- Padding de los elementos de la cardview -->
+    <dimen name="card_element_padding">3dp</dimen>
+
+    <!-- Padding del layout de la cardview -->
+    <dimen name="card_layout_padding">10dp</dimen>
 
 </resources>

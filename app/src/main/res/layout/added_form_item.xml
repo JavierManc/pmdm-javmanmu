@@ -11,53 +11,53 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="@dimen/card_layout_padding">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragment_card_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            tools:text="@string/fragment_list_example_name"
+            android:padding="@dimen/card_element_padding"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textStyle="bold"/>
+            tools:text="@string/fragment_list_example_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragment_card_comunity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            tools:text="@string/fragment_list_example_comunity"
+            android:padding="@dimen/card_element_padding"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragment_card_name" />
+            app:layout_constraintTop_toBottomOf="@id/fragment_card_name"
+            tools:text="@string/fragment_list_example_comunity" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragment_card_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            tools:text="@string/fragment_form_gender_male"
+            android:padding="@dimen/card_element_padding"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragment_card_comunity" />
+            app:layout_constraintTop_toBottomOf="@id/fragment_card_comunity"
+            tools:text="@string/fragment_form_gender_male" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragment_card_primary_position"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            tools:text="@string/fragment_form_midfield_position"
+            android:padding="@dimen/card_element_padding"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fragment_card_name" />
+            app:layout_constraintTop_toTopOf="@id/fragment_card_name"
+            tools:text="@string/fragment_form_midfield_position" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragment_card_secondary_position"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            tools:text="@string/fragment_form_defender_position"
+            android:padding="@dimen/card_element_padding"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragment_card_primary_position" />
+            app:layout_constraintTop_toBottomOf="@id/fragment_card_primary_position"
+            tools:text="@string/fragment_form_defender_position" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
