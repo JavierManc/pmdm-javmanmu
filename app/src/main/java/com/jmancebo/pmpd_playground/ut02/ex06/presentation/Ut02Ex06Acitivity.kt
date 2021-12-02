@@ -1,20 +1,14 @@
 package com.jmancebo.pmpd_playground.ut02.ex06.presentation
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import com.google.gson.Gson
 import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.databinding.ActivityUt02Ex06AcitivityBinding
-import com.jmancebo.pmpd_playground.ut02.ex06.data.SharedPrefLocalSource
-import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
-import com.jmancebo.pmpd_playground.ut02.ex06.presentation.Ut02Ex06FormFragment
-import com.jmancebo.pmpd_playground.ut02.ex06.presentation.Ut02Ex06ListFragment
-import com.jmancebo.pmpd_playground.ut02.ex06.serializer.GsonSerializer
+
 
 class Ut02Ex06Acitivity : AppCompatActivity() {
 
@@ -26,7 +20,6 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setupView()
     }
 
@@ -66,9 +59,11 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
                 if (actualFragment == 1) {
                     replaceFragment(bind.container.id, Ut02Ex06ListFragment.createInstance())
                     actualFragment = 2
+                    supportActionBar?.title = "Listado de jugadores"
                 } else {
                     replaceFragment(bind.container.id, Ut02Ex06FormFragment.createInstance())
                     actualFragment = 1
+                    supportActionBar?.title = "Formulario"
                 }
                 true
             }

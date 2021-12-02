@@ -14,7 +14,6 @@ class SavePlayerUseCase(private val sharedPref: SharedPrefLocalSource) {
         val comunity: String,
         val gender: String,
         val firstPosition: String,
-        val secondPosition: String?,
-        val thirdPosition: String?
+        val secondPosition: String?
     )
 }
