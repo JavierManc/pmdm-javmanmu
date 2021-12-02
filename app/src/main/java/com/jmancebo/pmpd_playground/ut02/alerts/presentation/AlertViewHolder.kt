@@ -16,14 +16,13 @@ class AlertViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         bind.infoIcon.setImageResource(selectIcon(alertViewState.type))
         itemView.setOnClickListener {
             itemView.context.startActivity(
-                SecondActivity.getIntent(
+                EspecificAlertActivity.getIntent(
                     itemView.context,
                     alertViewState.id
                 )
             )
         }
     }
-
     /**
      * Uso de When como alternativa al IF .. ELSE
      * Alternativa IF .. ELSE

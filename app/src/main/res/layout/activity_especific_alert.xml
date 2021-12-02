@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut02.alerts.presentation.EspecificAlertActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/alert_list_custom_toolbar"
+        layout="@layout/alert_list_custom_toolbar" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/especific_alert_margin">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/alert_icon"
+                android:layout_width="@dimen/alert_icon_size"
+                android:layout_height="@dimen/alert_icon_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_info_blue_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/alert_title"
+                android:layout_width="@dimen/alert_component_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/especific_alert_title_margin"
+                android:textColor="@color/green"
+                android:textSize="@dimen/especific_alert_title_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/alert_icon"
+                app:layout_constraintTop_toTopOf="@id/alert_icon"
+                tools:text="@string/alert_example_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/files_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/especific_alert_margin"
+                android:text="@string/especific_alert_files"
+                android:textColor="@color/green"
+                app:layout_constraintStart_toStartOf="@id/alert_icon"
+                app:layout_constraintTop_toBottomOf="@id/alert_title" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/divider_files_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/especific_alert_divider"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/alert_title"
+                app:layout_constraintStart_toStartOf="@id/files_title"
+                app:layout_constraintTop_toBottomOf="@id/files_title" />
+
+            <TableRow
+                android:id="@+id/first_alert_file_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/especific_alert_margin"
+                android:background="@drawable/border_table"
+                android:padding="@dimen/especific_alert_table_padding"
+                app:layout_constraintStart_toStartOf="@id/divider_files_line"
+                app:layout_constraintTop_toBottomOf="@id/divider_files_line">
+
+                <TextView
+                    android:id="@+id/first_file_title"
+                    android:width="@dimen/especific_alert_table_widht"
+                    tools:text="Nota Informativa" />
+
+                <ImageView
+                    android:layout_width="@dimen/alert_icon_size"
+                    android:layout_height="@dimen/alert_icon_size"
+                    android:src="@drawable/download_file_black_24dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/second_alert_file_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_table"
+                android:padding="@dimen/especific_alert_table_padding"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/first_alert_file_row"
+                app:layout_constraintTop_toBottomOf="@id/first_alert_file_row">
+
+                <TextView
+                    android:id="@+id/second_file_title"
+                    android:width="@dimen/especific_alert_table_widht"
+                    tools:text="Recomendaciones de manejo. Periodo estival 2021" />
+
+                <ImageView
+                    android:layout_width="@dimen/alert_icon_size"
+                    android:layout_height="@dimen/alert_icon_size"
+                    android:src="@drawable/download_file_black_24dp" />
+            </TableRow>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/alert_content_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/especific_alert_margin"
+                android:text="@string/especific_alert_content"
+                android:textColor="@color/green"
+                app:layout_constraintStart_toStartOf="@id/second_alert_file_row"
+                app:layout_constraintTop_toBottomOf="@id/second_alert_file_row" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/divider_content_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/especific_alert_divider"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/alert_title"
+                app:layout_constraintStart_toStartOf="@id/alert_content_title"
+                app:layout_constraintTop_toBottomOf="@id/alert_content_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/especific_alert_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/especific_alert_margin"
+                app:layout_constraintStart_toStartOf="@id/divider_content_line"
+                app:layout_constraintTop_toBottomOf="@id/divider_content_line"
+                tools:text="Contenido de la alerta" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

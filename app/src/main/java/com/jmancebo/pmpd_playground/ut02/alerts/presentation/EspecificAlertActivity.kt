@@ -1,5 +1,6 @@
 package com.jmancebo.pmpd_playground.ut02.alerts.presentation
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -7,59 +8,70 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.HtmlCompat
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.jmancebo.pmpd_playground.R
-import com.jmancebo.pmpd_playground.databinding.ActivityAlertBinding
+import com.jmancebo.pmpd_playground.databinding.ActivityEspecificAlertBinding
 import com.jmancebo.pmpd_playground.ut02.alerts.app.RetrofitApiClient
 import com.jmancebo.pmpd_playground.ut02.alerts.data.AlertDataRepository
 import com.jmancebo.pmpd_playground.ut02.alerts.data.AlertRemoteSource
-import com.jmancebo.pmpd_playground.ut02.alerts.domain.GetAlertUseCase
+import com.jmancebo.pmpd_playground.ut02.alerts.domain.GetEspecificAlertUseCase
 
-class AlertActivity : AppCompatActivity() {
 
-    private val alertModel: AlertViewModel = AlertViewModel(
-        GetAlertUseCase(
+class EspecificAlertActivity : AppCompatActivity() {
+
+    private val bind: ActivityEspecificAlertBinding by lazy {
+        ActivityEspecificAlertBinding.inflate(layoutInflater)
+    }
+
+    private val especificAlertViewModel: EspecificAlertViewModel = EspecificAlertViewModel(
+        GetEspecificAlertUseCase(
             AlertDataRepository(
                 AlertRemoteSource(RetrofitApiClient())
             )
         )
     )
-    private val alertAdapter = AlertAdapter()
-
-    private val bind: ActivityAlertBinding by lazy {
-        ActivityAlertBinding.inflate(layoutInflater)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setUpView()
-        alertModel.getAlerts()
+        setupObservers()
+        especificAlertViewModel.getAlertDetail(getAlertId())
     }
 
     private fun setUpView() {
         setContentView(bind.root)
         setupCustomToolbar()
-        setupViewStateObservers()
     }
 
     private fun setupCustomToolbar() {
         setSupportActionBar(bind.alertListCustomToolbar.toolbar)
-        supportActionBar?.title = "Listado de alertas"
+        supportActionBar?.title = "Alerta"
     }
 
-    private fun setupAlertRecycler() {
-        bind.listAlerts.adapter = alertAdapter
-        bind.listAlerts.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-    }
-
-    private fun setupViewStateObservers() {
-        val nameObserver = Observer<List<AlertViewState>> {
-            setupAlertRecycler()
-            alertAdapter.setItems(alertModel.alertViewState.value)
+    private fun setupObservers() {
+        val nameObserver = Observer<AlertViewState> { alert ->
+            render(alert)
         }
-        alertModel.alertViewState.observe(this, nameObserver)
+
+        especificAlertViewModel.alertViewState.observe(this, nameObserver)
+    }
+
+    private fun render(alertViewState: AlertViewState) {
+        bind.alertTitle.text = alertViewState.title
+        bind.alertIcon.setImageResource(selectIcon(alertViewState.type))
+        bind.firstFileTitle.text = alertViewState.files[0].name
+        bind.especificAlertContent.text =
+            HtmlCompat.fromHtml(alertViewState.body, HtmlCompat.FROM_HTML_MODE_LEGACY);
+    }
+
+    private fun getAlertId(): String {
+        return intent.extras!!.getString(INTENT_EXTRA_PARAM_ALERT_ID, "0")
+    }
+
+    private fun selectIcon(type: Int): Int = when (type) {
+        1 -> R.drawable.ic_warning_amber_red_24dp
+        else -> R.drawable.ic_info_blue_24dp
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -104,5 +116,14 @@ class AlertActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-}
 
+    companion object {
+        private val INTENT_EXTRA_PARAM_ALERT_ID = "key_alert_id"
+
+        fun getIntent(context: Context, alertId: String): Intent {
+            val intent = Intent(context, EspecificAlertActivity::class.java)
+            intent.putExtra(INTENT_EXTRA_PARAM_ALERT_ID, alertId)
+            return intent
+        }
+    }
+}

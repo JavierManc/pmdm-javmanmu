@@ -6,3 +6,10 @@ class GetAlertUseCase(val alertRepository: AlertRepository){
         return alertRepository.getAlerts()
     }
 }
+
+class GetEspecificAlertUseCase(private val alertRepository: AlertRepository) {
+
+    fun execute(alertId: String): AlertModel? {
+        return alertRepository.getAlert(alertId)
+    }
+}
