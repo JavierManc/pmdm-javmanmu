@@ -11,6 +11,10 @@ class Ut02Ex06ListFragment : Fragment() {
 
     private lateinit var binding: FragmentUt02Ex06ListBinding
 
+    private lateinit var viewModel: Ut02Ex06ListViewModel
+
+    private val listAdapter = ListAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -18,6 +22,11 @@ class Ut02Ex06ListFragment : Fragment() {
     ): View {
         binding = FragmentUt02Ex06ListBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    private fun render() {
+        val players = viewModel.getPlayers()
+        listAdapter.setItems(players)
     }
 
     companion object {
