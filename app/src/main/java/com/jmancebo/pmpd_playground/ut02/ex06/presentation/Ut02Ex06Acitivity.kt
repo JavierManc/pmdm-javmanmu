@@ -1,15 +1,20 @@
 package com.jmancebo.pmpd_playground.ut02.ex06.presentation
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
+import com.google.gson.Gson
 import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.databinding.ActivityUt02Ex06AcitivityBinding
-import com.jmancebo.pmpd_playground.ut02.ex06.domain.PlayerModel
+import com.jmancebo.pmpd_playground.ut02.ex06.data.SharedPrefLocalSource
+import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
+import com.jmancebo.pmpd_playground.ut02.ex06.presentation.Ut02Ex06FormFragment
+import com.jmancebo.pmpd_playground.ut02.ex06.presentation.Ut02Ex06ListFragment
+import com.jmancebo.pmpd_playground.ut02.ex06.serializer.GsonSerializer
 
 class Ut02Ex06Acitivity : AppCompatActivity() {
 
@@ -17,15 +22,17 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
         ActivityUt02Ex06AcitivityBinding.inflate(layoutInflater)
     }
 
+    private var actualFragment: Int = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setupView()
     }
 
     private fun setupView() {
         setContentView(bind.root)
         setupCustomToolbar()
-        //addFragment(bind.container.id, Ut02Ex06ListFragment.createInstance(), "2")
         addFragment(bind.container.id, Ut02Ex06FormFragment.createInstance(), "1")
     }
 
@@ -47,47 +54,6 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    private fun formButton() {
-        val fragment = Ut02Ex06FormFragment.createInstance()
-        fragment.binding.fragmentFormButton.setOnClickListener {
-            val player = PlayerModel(
-                fragment.binding.formNameEdit.toString(),
-                fragment.binding.formSurnameEdit.toString(),
-                fragment.binding.formComunitySelection.selectedItem.toString(),
-                if (fragment.binding.formGenderFemale.isChecked) {
-                    "Female"
-                } else {
-                    "Male"
-                },
-                createPositionList()
-            )
-
-            Log.d("@dev", player.toString())
-        }
-
-
-    }
-
-    private fun createPositionList(): List<String> {
-        val positionList: MutableList<String> = mutableListOf()
-
-        val fragment = Ut02Ex06FormFragment.createInstance()
-        if (fragment.binding.formPositionGoalkeeper.isChecked) {
-            positionList.add("Portero")
-        }
-        if (fragment.binding.formPositionStriker.isChecked) {
-            positionList.add("Delantero")
-        }
-        if (fragment.binding.formPositionDefender.isChecked) {
-            positionList.add("Defensa")
-        }
-        if (fragment.binding.formPositionMidfield.isChecked) {
-            positionList.add("Mediocentro")
-        }
-
-        return positionList
-    }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.ut02_ex06_menu, menu)
@@ -97,7 +63,13 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.fragment_change -> {
-                //replaceFragment(bind.container.id, Ut02Ex06FormFragment.createInstance())
+                if (actualFragment == 1) {
+                    replaceFragment(bind.container.id, Ut02Ex06ListFragment.createInstance())
+                    actualFragment = 2
+                } else {
+                    replaceFragment(bind.container.id, Ut02Ex06FormFragment.createInstance())
+                    actualFragment = 1
+                }
                 true
             }
             else -> super.onOptionsItemSelected(item)
