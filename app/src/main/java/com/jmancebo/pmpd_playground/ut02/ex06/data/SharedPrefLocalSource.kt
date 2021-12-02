@@ -6,7 +6,7 @@ import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
 import com.jmancebo.pmpd_playground.ut02.ex06.serializer.JsonSerializer
 
 class SharedPrefLocalSource(
-    activity: AppCompatActivity,
+    activity: Context,
     private val json: JsonSerializer
 ) {
     private val sharedpref = activity.getSharedPreferences(
