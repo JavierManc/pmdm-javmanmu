@@ -59,11 +59,11 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
                 if (currentFragment == 1) {
                     replaceFragment(bind.container.id, Ut02Ex06ListFragment.createInstance())
                     currentFragment = 2
-                    supportActionBar?.title = "Listado de jugadores"
+                    supportActionBar?.title = getString(R.string.fragment_form)
                 } else {
                     replaceFragment(bind.container.id, Ut02Ex06FormFragment.createInstance())
                     currentFragment = 1
-                    supportActionBar?.title = "Formulario"
+                    supportActionBar?.title = getString(R.string.fragment_list)
                 }
                 true
             }
