@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
 import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.databinding.FragmentUt02Ex06FormBinding
 import com.jmancebo.pmpd_playground.ut02.ex06.data.SharedPrefLocalSource
+import com.jmancebo.pmpd_playground.ut02.ex06.data.XmlLocalRepository
 import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
 import com.jmancebo.pmpd_playground.ut02.ex06.serializer.GsonSerializer
 
@@ -20,9 +20,10 @@ class Ut02Ex06FormFragment : Fragment() {
     private val viewModel: Ut02Ex06FormViewModel by lazy {
         Ut02Ex06FormViewModel(
             SavePlayerUseCase(
-                SharedPrefLocalSource(
-                    requireContext(),
-                    GsonSerializer(Gson())
+                XmlLocalRepository(
+                    SharedPrefLocalSource(
+                        requireContext(), GsonSerializer(Gson())
+                    )
                 )
             )
         )
@@ -55,9 +56,9 @@ class Ut02Ex06FormFragment : Fragment() {
         }
     }
 
-    private fun getPlayerParam(): SavePlayerUseCase.Param {
+    private fun getPlayerParam(): PlayerViewState {
         val positions = createPositionList()
-        return SavePlayerUseCase.Param(
+        return PlayerViewState(
             binding.inputName.text.toString(),
             binding.inputSurname.text.toString(),
             binding.selectComunity.selectedItem.toString(),
@@ -67,11 +68,17 @@ class Ut02Ex06FormFragment : Fragment() {
                 getString(R.string.fragment_form_gender_male)
             },
             positions[0],
-            if (positions.size >= 2) {
+            if (positions.size >= 1) {
                 positions[1]
             } else {
                 ""
+            },
+            if (positions.size >= 2) {
+                positions[2]
+            } else {
+                ""
             }
+
         )
     }
 

@@ -9,8 +9,8 @@ import androidx.lifecycle.Observer
 import com.google.gson.Gson
 import com.jmancebo.pmpd_playground.databinding.FragmentUt02Ex06ListBinding
 import com.jmancebo.pmpd_playground.ut02.ex06.data.SharedPrefLocalSource
+import com.jmancebo.pmpd_playground.ut02.ex06.data.XmlLocalRepository
 import com.jmancebo.pmpd_playground.ut02.ex06.domain.GetPlayerUseCase
-import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
 import com.jmancebo.pmpd_playground.ut02.ex06.serializer.GsonSerializer
 
 class Ut02Ex06ListFragment : Fragment() {
@@ -20,8 +20,8 @@ class Ut02Ex06ListFragment : Fragment() {
     private val viewModel: Ut02Ex06ListViewModel by lazy {
         Ut02Ex06ListViewModel(
             GetPlayerUseCase(
-                SharedPrefLocalSource(
-                    requireContext(), GsonSerializer(Gson())
+                XmlLocalRepository(
+                    SharedPrefLocalSource(requireContext(), GsonSerializer(Gson()))
                 )
             )
         )
@@ -51,7 +51,7 @@ class Ut02Ex06ListFragment : Fragment() {
     }
 
     private fun setUpStateObservers() {
-        val observer = Observer<List<SavePlayerUseCase.Param>> {
+        val observer = Observer<List<PlayerViewState>> {
             listAdapter.setItems(it)
         }
         viewModel.playerListViewState.observe(viewLifecycleOwner, observer)

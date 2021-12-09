@@ -4,18 +4,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jmancebo.pmpd_playground.R
-import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
 
 class ListAdapter : RecyclerView.Adapter<ListViewHolder>() {
 
-    private val dataSet: MutableList<SavePlayerUseCase.Param> = mutableListOf()
+    private val dataSet: MutableList<PlayerViewState> = mutableListOf()
 
-    fun setItems(items: List<SavePlayerUseCase.Param>) {
+    fun setItems(items: List<PlayerViewState>) {
         dataSet.clear()
         addItems(items)
     }
 
-    private fun addItems(items: List<SavePlayerUseCase.Param>) {
+    private fun addItems(items: List<PlayerViewState>) {
         dataSet.addAll(items)
         notifyDataSetChanged()
     }

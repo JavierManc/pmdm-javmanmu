@@ -11,17 +11,18 @@ import kotlinx.coroutines.launch
 
 class Ut02Ex06ListViewModel(private val useCase: GetPlayerUseCase) : ViewModel() {
 
-    val playerListViewState: LiveData<List<SavePlayerUseCase.Param>>
+    val playerListViewState: LiveData<List<PlayerViewState>>
         get() = _playerListViewState
 
-    private val _playerListViewState: MutableLiveData<List<SavePlayerUseCase.Param>> by lazy {
-        MutableLiveData<List<SavePlayerUseCase.Param>>()
+    private val _playerListViewState: MutableLiveData<List<PlayerViewState>> by lazy {
+        MutableLiveData<List<PlayerViewState>>()
     }
 
 
     fun getPlayers() {
         viewModelScope.launch(Dispatchers.IO) {
-            _playerListViewState.postValue(useCase.execute())
+            _playerListViewState.postValue(
+                useCase.execute().map { model -> PlayerViewState.modelToViewState(model) })
         }
     }
 }

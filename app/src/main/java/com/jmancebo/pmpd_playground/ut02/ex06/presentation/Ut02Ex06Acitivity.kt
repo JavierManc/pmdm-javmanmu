@@ -1,10 +1,10 @@
 package com.jmancebo.pmpd_playground.ut02.ex06.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.databinding.ActivityUt02Ex06AcitivityBinding
@@ -31,7 +31,7 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
 
     private fun setupCustomToolbar() {
         setSupportActionBar(bind.formCustomToolbar.toolbar)
-        supportActionBar?.title = "Formulario"
+        supportActionBar?.title = getString(R.string.fragment_form)
     }
 
     private fun addFragment(layoutId: Int, fragment: Fragment, tag: String) {

@@ -1,10 +1,8 @@
 package com.jmancebo.pmpd_playground.ut02.ex06.domain
 
-import com.jmancebo.pmpd_playground.ut02.ex06.data.SharedPrefLocalSource
+class GetPlayerUseCase(private val playerDataRepository: PlayerDataRepository) {
 
-class GetPlayerUseCase(private val sharedPref: SharedPrefLocalSource) {
-
-    fun execute(): List<SavePlayerUseCase.Param> {
-        return sharedPref.fetchAll()
+    fun execute(): List<PlayerModel> {
+        return playerDataRepository.fetchAll()
     }
 }
