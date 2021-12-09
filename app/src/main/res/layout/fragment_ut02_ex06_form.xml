@@ -10,7 +10,7 @@
         android:layout_margin="10dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/form_name"
+            android:id="@+id/label_name"
             style="@style/fragment_form_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,72 +19,72 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/form_name_edit"
+            android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/form_name"
-            app:layout_constraintTop_toBottomOf="@id/form_name" />
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/label_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/form_surname"
+            android:id="@+id/label_surname"
             style="@style/fragment_form_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_form_surname"
-            app:layout_constraintStart_toStartOf="@id/form_name"
-            app:layout_constraintTop_toBottomOf="@id/form_name_edit" />
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/input_name" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/form_surname_edit"
+            android:id="@+id/input_surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/form_surname"
-            app:layout_constraintTop_toBottomOf="@id/form_surname" />
+            app:layout_constraintStart_toStartOf="@id/label_surname"
+            app:layout_constraintTop_toBottomOf="@id/label_surname" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/form_comunity"
+            android:id="@+id/label_comunity"
             style="@style/fragment_form_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_form_comunity"
-            app:layout_constraintStart_toStartOf="@id/form_name"
-            app:layout_constraintTop_toBottomOf="@id/form_surname_edit" />
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/input_surname" />
 
         <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/form_comunity_selection"
+            android:id="@+id/select_comunity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/form_margin_top"
             android:entries="@array/autonomous_community"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/form_comunity" />
+            app:layout_constraintTop_toBottomOf="@id/label_comunity" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/form_gender"
+            android:id="@+id/label_gender"
             style="@style/fragment_form_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_form_gender"
-            app:layout_constraintStart_toStartOf="@id/form_name"
-            app:layout_constraintTop_toBottomOf="@id/form_comunity_selection" />
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/select_comunity" />
 
         <RadioGroup
-            android:id="@+id/form_gender_selection"
+            android:id="@+id/select_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/form_gender">
+            app:layout_constraintTop_toBottomOf="@id/label_gender">
 
             <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/form_gender_female"
+                android:id="@+id/option_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:text="@string/fragment_form_gender_female" />
 
             <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/form_gender_male"
+                android:id="@+id/option_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fragment_form_gender_male" />
@@ -93,42 +93,42 @@
 
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/form_position"
+            android:id="@+id/label_position"
             style="@style/fragment_form_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_form_position"
-            app:layout_constraintStart_toStartOf="@id/form_name"
-            app:layout_constraintTop_toBottomOf="@id/form_gender_selection" />
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/select_gender" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/form_position_select"
+            android:id="@+id/select_position"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/form_position">
+            app:layout_constraintTop_toBottomOf="@id/label_position">
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/form_position_goalkeeper"
+                android:id="@+id/option_position_goalkeeper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fragment_form_goalkeeper_position" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/form_position_defender"
+                android:id="@+id/option_position_defender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fragment_form_defender_position" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/form_position_midfield"
+                android:id="@+id/option_position_midfield"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fragment_form_midfield_position" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/form_position_striker"
+                android:id="@+id/option_position_striker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fragment_form_striker_position" />
@@ -136,7 +136,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/fragment_form_button"
+            android:id="@+id/form_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/secondaryColor"
@@ -146,7 +146,7 @@
             app:layout_constraintHeight_percent=".5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/form_position_select"
+            app:layout_constraintTop_toBottomOf="@id/select_position"
             app:layout_constraintWidth_percent=".5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
