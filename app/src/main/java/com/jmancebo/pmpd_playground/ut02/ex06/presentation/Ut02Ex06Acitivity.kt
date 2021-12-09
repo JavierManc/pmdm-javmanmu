@@ -16,7 +16,7 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
         ActivityUt02Ex06AcitivityBinding.inflate(layoutInflater)
     }
 
-    private var actualFragment: Int = 1
+    private var currentFragment: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,13 +56,13 @@ class Ut02Ex06Acitivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.fragment_change -> {
-                if (actualFragment == 1) {
+                if (currentFragment == 1) {
                     replaceFragment(bind.container.id, Ut02Ex06ListFragment.createInstance())
-                    actualFragment = 2
+                    currentFragment = 2
                     supportActionBar?.title = "Listado de jugadores"
                 } else {
                     replaceFragment(bind.container.id, Ut02Ex06FormFragment.createInstance())
-                    actualFragment = 1
+                    currentFragment = 1
                     supportActionBar?.title = "Formulario"
                 }
                 true
