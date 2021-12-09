@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_name"
+            style="@style/fragment_form_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_form_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_surname"
+            style="@style/fragment_form_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_form_surname"
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/input_name" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/label_surname"
+            app:layout_constraintTop_toBottomOf="@id/label_surname" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_comunity"
+            style="@style/fragment_form_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_form_comunity"
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/input_surname" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/select_comunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_margin_top"
+            android:entries="@array/autonomous_community"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_comunity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_gender"
+            style="@style/fragment_form_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_form_gender"
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/select_comunity" />
+
+        <RadioGroup
+            android:id="@+id/select_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_gender">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="@string/fragment_form_gender_female" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_form_gender_male" />
+
+        </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_position"
+            style="@style/fragment_form_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_form_position"
+            app:layout_constraintStart_toStartOf="@id/label_name"
+            app:layout_constraintTop_toBottomOf="@id/select_gender" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/select_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_position">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_position_goalkeeper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_form_goalkeeper_position" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_position_defender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_form_defender_position" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_position_midfield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_form_midfield_position" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_position_striker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_form_striker_position" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/form_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:text="@string/fragment_form_save"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent=".5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/select_position"
+            app:layout_constraintWidth_percent=".5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

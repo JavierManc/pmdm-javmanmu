@@ -79,4 +79,72 @@
     <dimen name="margin_start_header_view1">5dp</dimen>
 
     <dimen name="margin_footer_img">30dp</dimen>
+
+    <!-- DIMENS DE LA VISTA DE ALERTA -->
+
+    <!-- Márgenes de los bloques -->
+    <dimen name="alert_block_margin">5dp</dimen>
+
+    <!-- Padding de los componentes de la vista -->
+    <dimen name="alert_component_padding">2dp</dimen>
+
+    <!-- Tamaño de los textos de la vista -->
+    <dimen name="alert_component_width">330dp</dimen>
+
+    <!-- Tamaño de el icono de la alerta -->
+    <dimen name="alert_icon_size">30dp</dimen>
+
+    <!-- Radio de la CardView -->
+    <dimen name="alert_corner_radio">4dp</dimen>
+
+    <!-- Márgenes de la CardView -->
+    <dimen name="alert_card_margin">8dp</dimen>
+
+    <!-- Corner radius de la CardView -->
+    <dimen name="alert_card_corner_radius">4dp</dimen>
+
+    <!-- Tamaño del texto del body -->
+    <dimen name="alert_text_size">12sp</dimen>
+
+    <!-- DIMEN VISTA DE ALERTA EN ESPECÍFICO -->
+
+    <!-- Márgen del bloque de datos -->
+    <dimen name="especific_alert_margin">15dp</dimen>
+
+    <!-- Tamaño de texto del título -->
+    <dimen name="especific_alert_title_size">18sp</dimen>
+
+    <!-- Márgen del título con respecto al icono -->
+    <dimen name="especific_alert_title_margin">5dp</dimen>
+
+    <!-- Tamaño de ancho de las líneas divisorias -->
+    <dimen name="especific_alert_divider">1dp</dimen>
+
+    <!-- Relleno de las tablas -->
+    <dimen name="especific_alert_table_padding">3dp</dimen>
+
+    <!-- Ancho del texto de las tablas -->
+    <dimen name="especific_alert_table_widht">300dp</dimen>
+
+
+    <!-- DIMENS DE LA ACTIVIDAD DE LOS FRAGMENTOS -->
+
+    <!-- Tamaño de texto de palabras del formulario -->
+    <dimen name="form_text_size">15sp</dimen>
+
+    <!-- Márgen superior entre las filas del formulario -->
+    <dimen name="form_margin_top">5dp</dimen>
+
+    <!-- Márgen de la cardview del listado -->
+    <dimen name="card_margin">8dp</dimen>
+
+    <!-- Radio de las esquinas del cardview -->
+    <dimen name="card_radius">2dp</dimen>
+
+    <!-- Padding de los elementos de la cardview -->
+    <dimen name="card_element_padding">3dp</dimen>
+
+    <!-- Padding del layout de la cardview -->
+    <dimen name="card_layout_padding">10dp</dimen>
+
 </resources>
