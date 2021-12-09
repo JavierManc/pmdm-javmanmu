@@ -42,5 +42,6 @@
     <string name="fragment_form_save">GUARDAR</string>
     <string name="fragment_list_example_name">Jesús Navas Domínguez</string>
     <string name="fragment_list_example_comunity">Andalucía</string>
-
+    <string name="fragment_form">Formulario</string>
+    <string name="fragment_list">Listado de jugadores</string>
 </resources>
