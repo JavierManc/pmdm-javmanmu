@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
+import com.jmancebo.pmpd_playground.R
 import com.jmancebo.pmpd_playground.databinding.FragmentUt02Ex06FormBinding
 import com.jmancebo.pmpd_playground.ut02.ex06.data.SharedPrefLocalSource
 import com.jmancebo.pmpd_playground.ut02.ex06.domain.SavePlayerUseCase
@@ -43,29 +44,27 @@ class Ut02Ex06FormFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fragmentFormButton.setOnClickListener {
+        binding.formButton.setOnClickListener {
             savePlayer()
         }
     }
 
     private fun savePlayer() {
-        binding.fragmentFormButton.setOnClickListener {
-            val player = getPlayerParam()
-            viewModel.savePlayer(player)
-            Toast.makeText(requireContext(), "Jugador añadido", Toast.LENGTH_SHORT).show()
+        binding.formButton.setOnClickListener {
+            viewModel.savePlayer(getPlayerParam())
         }
     }
 
     private fun getPlayerParam(): SavePlayerUseCase.Param {
         val positions = createPositionList()
         return SavePlayerUseCase.Param(
-            binding.formNameEdit.text.toString(),
-            binding.formSurnameEdit.text.toString(),
-            binding.formComunitySelection.selectedItem.toString(),
-            if (binding.formGenderFemale.isChecked) {
-                "Mujer"
+            binding.inputName.text.toString(),
+            binding.inputSurname.text.toString(),
+            binding.selectComunity.selectedItem.toString(),
+            if (binding.optionFemale.isChecked) {
+                getString(R.string.fragment_form_gender_female)
             } else {
-                "Hombre"
+                getString(R.string.fragment_form_gender_male)
             },
             positions[0],
             if (positions.size >= 2) {
@@ -79,17 +78,17 @@ class Ut02Ex06FormFragment : Fragment() {
     private fun createPositionList(): List<String> {
         val positionList: MutableList<String> = mutableListOf()
 
-        if (binding.formPositionGoalkeeper.isChecked) {
-            positionList.add("Portero")
+        if (binding.optionPositionGoalkeeper.isChecked) {
+            positionList.add(getString(R.string.fragment_form_goalkeeper_position))
         }
-        if (binding.formPositionStriker.isChecked) {
-            positionList.add("Delantero")
+        if (binding.optionPositionStriker.isChecked) {
+            positionList.add(getString(R.string.fragment_form_striker_position))
         }
-        if (binding.formPositionDefender.isChecked) {
-            positionList.add("Defensa")
+        if (binding.optionPositionDefender.isChecked) {
+            positionList.add(getString(R.string.fragment_form_defender_position))
         }
-        if (binding.formPositionMidfield.isChecked) {
-            positionList.add("Mediocentro")
+        if (binding.optionPositionMidfield.isChecked) {
+            positionList.add(getString(R.string.fragment_form_midfield_position))
         }
 
         return positionList
