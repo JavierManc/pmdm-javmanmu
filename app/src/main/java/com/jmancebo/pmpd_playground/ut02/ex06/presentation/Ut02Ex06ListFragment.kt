@@ -34,6 +34,7 @@ class Ut02Ex06ListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        setUpRecycler()
         binding = FragmentUt02Ex06ListBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -51,8 +52,7 @@ class Ut02Ex06ListFragment : Fragment() {
 
     private fun setUpStateObservers() {
         val observer = Observer<List<SavePlayerUseCase.Param>> {
-            setUpRecycler()
-            viewModel.playerListViewState.value?.let { it1 -> listAdapter.setItems(it1) }
+            listAdapter.setItems(it)
         }
         viewModel.playerListViewState.observe(viewLifecycleOwner, observer)
     }
