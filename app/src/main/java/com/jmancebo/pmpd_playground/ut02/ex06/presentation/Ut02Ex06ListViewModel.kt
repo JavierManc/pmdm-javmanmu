@@ -20,8 +20,8 @@ class Ut02Ex06ListViewModel(private val useCase: GetPlayerUseCase) : ViewModel()
 
 
     fun getPlayers() {
-        viewModelScope.launch(Dispatchers.Main) {
-            _playerListViewState.value = useCase.execute()
+        viewModelScope.launch(Dispatchers.IO) {
+            _playerListViewState.postValue(useCase.execute())
         }
     }
 }
